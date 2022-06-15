@@ -1,0 +1,554 @@
+body {
+    padding: 0%;
+    margin: 0%;
+    font-family: "Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.42857143;
+    background-color: #f1f4f6;
+}
+.mk_red {
+    color: #ff6f61;
+}
+.mk_grey {
+    color: #1a1a1a;
+}
+.mk_mGre {
+    color: grey;
+}
+.mk_bold {
+    font-weight: bold;
+}
+#top_container {
+    background-color: white;
+    margin-bottom: 50px;
+}
+/* ------------image Seaction -----------*/
+#productDiv {
+    width: 85%;
+    margin: auto;
+    margin-top: 100px;
+    /* border: 1px solid red; */
+    display: flex;
+}
+
+#product_image {
+    width: 40%;
+    padding: 20px;
+}
+#product_image img {
+    width: 100%;
+}
+/* ------------image Seaction End -----------*/
+
+
+/* -------------------Mid section -----------*/ 
+#product_data {
+    padding: 0% 2%;
+}
+
+/* font section of product data */
+#product_data > p {
+    color: #ff6f61;
+}
+#product_data h4 {
+    font-weight: lighter;
+}
+#product_highlights h4, p{
+    font-size: 0.9rem;
+}
+#product_highlights p {
+    line-height: 20px;
+}
+/* font selction end (product data) */
+#pack > div{
+    color: #913d36;
+    width: fit-content;
+    padding: 0% 8% 0% 3%;
+    line-height: 1%;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    border: 1px solid #913d36;
+    background-color: #fff3e3;
+}
+
+#rating {
+    font-size: 0.9rem;
+    background-color:#1AAB2A;
+    color: white;
+    width: fit-content;
+    padding: 2px 6px;
+}
+#rating i {
+    color: white;
+}
+#product_Add {
+    width: 45%;
+    position: relative;
+}
+
+/* -------------------Mid section End -------------*/ 
+
+
+/* ------------Add to cart Seaction  -------------*/
+
+#addSec_1 {
+    padding: 0;
+    border-radius: 10px;
+    /* background-color: ; */
+    box-shadow: 0 1px 2px 1px rgb(0 0 0 / 30%);
+}
+/* head line section */
+#addbox_head {
+    background-color: #edf9ee;
+    border-radius: 10px 10px 0 0;
+    padding: 6px 5px;
+    font-size: 0.8rem;
+}
+#addbox_head i {
+    color: #1AAB2A;
+    margin: 1.2%;
+    margin-left: 10px;
+}
+/* head line section end */
+
+
+
+/* Price select section */
+
+#price_form {
+    margin-top: 10px;
+    padding: 1em;
+    grid-row-gap: 0.8em;
+}
+#mrp_price {
+    text-decoration: line-through;
+    font-size: 1.1rem;
+}
+#Offspan {
+    padding: 4px;
+    font-size: 1rem;
+    color: #1AAB2A;
+    background-color: #edf9ee;
+}
+#c_plan {
+    padding: 4px;
+    border: 1px solid;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: white;
+    background-color: #913d36;
+}
+#plan_ad{
+    font-size: 0.9rem;
+}
+
+/* checkbox section */
+.checkbox_container {
+    width: 80%;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.checkbox_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    margin-top: 7px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox_container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.checkbox_container input:checked ~ .checkmark {
+    background-color: rgb(255, 111, 97);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.checkbox_container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.checkbox_container .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* checkbox section end */
+
+/* select quantity section */
+#qty_box {
+    padding: 5px 30px;
+    text-align: left;
+    border-style: solid;
+    border-width: thin;
+    border-color: #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#submit {
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 111, 97);
+    color: white;
+    font-weight:700;
+    
+}
+
+#chMark {
+    position: absolute;
+    color: white;
+    top: 44.2%;
+    left: 40%;
+    display: none;
+}
+
+
+
+/* select quantity section  end*/
+
+/* Price select section end*/
+
+
+/* offer section */
+#addSec_2 img {
+    margin-top: 20px;
+    width: 100%;
+}
+#addSec_2 div {
+    margin-bottom: 20px;
+}
+#add_offer {
+    display: flex;
+    position: relative;
+    padding: 25px;
+    border-style: dashed;
+    border-width: thin;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+#add_offer .fa-tag {
+    margin-top: 10px;
+    padding: 10px;
+    color: #1AAB2A;
+}
+#abs_offer {
+    top: 5%;
+    left: 0%;
+    padding: 2px;
+    padding-right: 20px;
+    background-color: #1AAB2A;
+    color: white;
+    position: absolute;
+}
+#showmoreTag {
+    display: flex;
+    bottom: 1%;
+    right: 5%;
+    position: absolute;
+    color: #ff6f61;
+    font-weight: bold;
+}
+#showmoreTag i {
+    color: #ff6f61;
+    padding: 2px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+
+/* ------------Add to cart Seaction End  -------------*/
+
+
+/* Buttom section start */
+
+#bottom_container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    gap: 50px;
+}
+#productInfo {
+    width: 100%;
+    padding: 2%;
+    /* border: 1px solid; */
+    background-color: white;
+}
+#infoDiv p {
+    font-size: 0.8rem;
+    line-height: 20px;
+}
+
+#suggetionDiv {
+    /* border: 1px solid; */
+    width: 50%;
+}
+.sgBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10%;
+    background-color: white;
+    /* text-align: center; */
+}
+.sgBox img {
+    width: 25%;
+    height: 25%;
+    margin-bottom: 40px;
+}
+.sgBox .button {
+    padding: 10px;
+    color: #ff6f61;
+    border: 1px;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 8px;
+    border-color: #ff6f61;
+    background-color: white;
+}
+.sgBox .button:hover {
+    color: white;
+    background-color: #ff6f61;
+    cursor: pointer;
+}
+
+#ordBox2 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 5%;
+    background-color: white;
+    
+}
+#ordBox2 div {
+    text-align: center;
+    padding: 1%;
+    font-size: 0.8rem;
+    line-height: 5px;
+}
+
+#addr_box {
+    color: grey;
+    background-color: white;
+    padding: 5%;
+    margin-top: 20px;
+    line-height: 5px;
+}
+#addr_box div {
+    display: flex;
+    line-height: normal;
+    font-size: 0.7rem;
+}
+#img_1 + p {
+    margin-top: 20px;
+}
+#img_1 {
+    width: 20%;
+    height: 20%;
+}
+#img_2{
+    margin-top: 5px;
+    margin-right: 10px ;
+    width: 8%;
+    height: 8%;
+}
+#addr_box span {
+    font-weight: bold;
+}
+
+
+/* Rating box */
+#rating_div {
+    margin-top: 20px;
+    width: 51.5%;
+    margin-left: 7.5%;
+    padding: 2%;
+    background-color: white;
+}
+#rtbox {
+    display: flex;
+}
+#rtsec {
+    color: #1AAB2A;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+#rbox_1 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 12%;
+    padding-bottom: 10px;
+    border-right: 1px solid rgb(240, 240, 240);
+}
+
+
+/* Three column layout */
+.side {
+    float: left;
+    width: 15%;
+    margin-top: 10px;
+}
+
+.middle {
+    margin-top:15px;
+    float: left;
+    width: 70%;
+}
+
+  /* Place text to the right */
+.right {
+    text-align: right;
+}
+
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+  /* The bar container */
+.bar-container {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+}
+
+  /* Individual bars */
+.bar-5 {
+    border-radius: 10px;
+    width: 60%; height: 10px; background-color: #1AAB2A;
+}
+.bar-4 {
+    border-radius: 10px;
+    width: 30%; height: 10px; background-color: #1AAB2A;
+}
+.bar-3 {
+    border-radius: 10px;
+    width: 10%; height: 10px; background-color: #1AAB2A;
+}
+.bar-2 {
+    border-radius: 10px;
+    width: 10%; height: 10px; background-color: #1AAB2A;
+}
+.bar-1 {
+    border-radius: 10px;
+    width: 15%; height: 10px; background-color: #1AAB2A;
+}
+
+/* socoal handel */
+#social_box {
+    margin-top: 20px;
+    width: 55.5%;
+    margin-left: 7.5%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+
+}
+#social_box div {
+    margin: 20px;
+    box-sizing: border-box;
+}
+#social_box div:nth-child(2) {
+    margin-right: 50px;
+}
+#social_box i {
+    margin: 5px;
+}
+.fa-facebook-f {
+    color: 	#4267B2;
+}
+.fa-linkedin {
+    color: #0072b1;
+}
+.fa-twitter {
+    color: #00acee;
+}
+
+#otherInfo {
+    margin-top: 20px;
+    width: 55.5%;
+    margin-left: 7.5%;
+    /* background-color: white; */
+    line-height: 10px;
+    font-size: 0.9rem;
+}
+#otherInfo div {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+#otherInfo h4 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.p-lineh {
+    line-height: 20px;
+    font-size: 0.8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 400px) {
+    .side, .middle {
+        width: 100%;
+    }
+    .right {
+        display: none;
+    }
+}
