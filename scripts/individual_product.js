@@ -1,19 +1,8 @@
-let product_data = {
-    "id": 1,
-    "title": "Tata 1mg Probiotics 30 Billion CFUs+ Capsule with Prebiotic Fibre",
-    "subTitle": "Tata 1mg Healthcare Solutions Private Limited",
-    "price": 595,
-    "category": "digestive",
-    "type": "Bottle",
-    "image": "https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1653939711/fleyk9fp2twf2ztnwbcb.jpg",
-    "rate": 4.8,
-    "count": "60 Capsules",
-    "off": 50,
-    "quantity": 1,
-    "max_unit": 30, 
-}
+let product_data = JSON.parse(localStorage.getItem("toShow"))
 
+let cartArr = JSON.parse(localStorage.getItem("toCart")) || [];
 
+// console.log(product_data)
 
 let append = (data) => {
     document.title = data.title;
@@ -29,14 +18,14 @@ let append = (data) => {
     let title  = data.title
     let subTitle = data.subTitle;
     let price = data.price;
-    let type = data.type;
     let rate = data.rate;
     let count = data.count;
     let off = data.off;
-    let quantity = data.quantity;
     let unit = data.max_unit;
-    
-    let discount_price = Math.ceil(price*(off/100));
+    let people = Math.floor(Math.random() * 3000);
+
+    let discount_price = price - Math.floor(price*(off/100));
+
 
 
 
@@ -68,7 +57,7 @@ let append = (data) => {
     </div>
     <div id="product_Add">
         <div id="addSec_1">
-            <div id="addbox_head"> <i class="fa-solid fa-chart-line"></i> 54 people bought this recently</div>
+            <div id="addbox_head"> <i class="fa-solid fa-chart-line"></i> ${people} people bought this recently</div>
             
             <form id="price_form" onsubmit="addToCart(addFirst, addSec, addinital)">
                 <label class="checkbox_container">
@@ -137,8 +126,6 @@ let append = (data) => {
             selectTag.append (option)
         }
     }
-
-
 }
 
 append(product_data);
@@ -158,6 +145,8 @@ let addinital = () => {
     submitBtn.value =  "ADD TO CART"
 }
 
+
+
 // function addToCart
 
 
@@ -176,14 +165,25 @@ let addToCart = (func1, func2, func3) => {
     }, 5000)
 
 
-    let selected_quant = document.getElementById("qty_box").value;
-    product_data.quantity = selected_quant
 
-
-
-
-
-    // localStorage.setItem("toCart", JSON.stringify(product_data));
+    let selected_quant = Number(document.getElementById("qty_box").value);
+    
+    if(cartArr.length !== 0) {
+        cartArr.forEach(cIteams => {
+            if(cIteams.id == product_data.id) {
+                cIteams.quantity =  Number(cIteams.quantity + selected_quant);
+                localStorage.setItem("toCart", JSON.stringify(cartArr))
+                alert("Increased Iteam Quantity")
+            }
+        })
+    }
+    else {
+        if(selected_quant !== 1) {
+            product_data.quantity = Number(product_data.quantity + selected_quant);
+        }
+        cartArr.push(product_data)
+        localStorage.setItem("toCart", JSON.stringify(cartArr))
+    }
 }
 
 

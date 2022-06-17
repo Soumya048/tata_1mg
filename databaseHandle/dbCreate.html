@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dbstyle.css">
+    <title>Database Create</title>
+</head>
+<body>
+
+    <!-- Get -->
+    <div>
+        <h2>Get all Products from DataBase</h2>
+        <div id="btnDiv">
+            <p>Printing in Console</p>
+            <button onclick="getData()">Get Products</button>
+        </div>
+        <hr>
+        <div id="displayData">
+        </div>
+    </div>
+
+    <!-- post -->
+    <div>
+        <h2>Post</h2>
+        <div  class="sectionDiv">
+            <div>
+                <form onsubmit="addProduct()">
+                    <input id="imgUrl" type="url" placeholder="Image Url" required>
+                    <input id="id" type="number" placeholder="Product Id" required>
+                    <input id="title" type="text" placeholder="Title" required>
+                    <input id="subTitle" type="text" placeholder="Sub Title" required>
+                    <input id="price" type="number" placeholder="Price" required>
+                    <input id="category" type="text" placeholder="Category" required>
+                    <input id="type" type="text" placeholder="Type" required>
+                    <input id="rate" type="number" placeholder="Rating" step=".01" required>
+                    <input id="count" type="text" placeholder="count capsules/tablets" required>
+                    <input id="discount" type="number" placeholder="Discount" required>
+                    <input id="max_unit" type="number" placeholder="Max Unit" required>
+                    <input id="submit" type="submit" value="Add Product"> 
+                </form>           
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- delete -->
+    <h2>Delete Data</h2>
+    <div id="delete" class="sectionDiv">
+        <div>
+            <input id="delete_id" type="number" placeholder="Enter Id">
+            <button onclick="deleteProduct()">Delete</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="./dbCreate.js"></script>

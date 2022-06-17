@@ -31,11 +31,13 @@ body {
 }
 
 #product_image {
-    width: 40%;
+    width: 400px;
+    height: 400px;
     padding: 20px;
 }
 #product_image img {
     width: 100%;
+    height: 100%;
 }
 /* ------------image Seaction End -----------*/
 
@@ -236,8 +238,8 @@ body {
 #chMark {
     position: absolute;
     color: white;
-    top: 44.2%;
-    left: 40%;
+    top: 43%;
+    left: 41%;
     display: none;
 }
 
@@ -544,7 +546,59 @@ body {
 
 
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
+    .side, .middle {
+        width: 100%;
+    }
+    .right {
+        display: none;
+    }
+
+    #top_container {
+        width: 100%;
+    }
+    #productDiv {
+        flex-direction: column;
+    }
+    #product_Add {
+        width: 100%;
+    }
+    #product_image img {
+        width: fit-content;
+    }
+    #bottom_container {
+        flex-direction: column;
+    }
+    #suggetionDiv {
+        width: 100%;
+    }
+    #rating_div{
+        width: 100%;
+        margin: 0%;
+        margin-top: 40px;
+    }
+    #rbox_1 {
+        width: 100%;
+    }
+    #rbox_2 {
+        display: none;
+    }
+    #social_box {
+        width: fit-content;
+        padding: 0%;
+        margin: 0%;
+    }
+    #otherInfo {
+        width: 100%;
+        padding: 1%;
+        margin: 0%;
+    }
+    #otherInfo > div > p {
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 750px) {
     .side, .middle {
         width: 100%;
     }
