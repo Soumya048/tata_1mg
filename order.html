@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order_page</title>
+    <link rel="stylesheet" href="./tata_1mg/styles/order.css">
+</head>
+<body>
+
+    <!--navbar part-->
+    <div id="navbar">
+        <img id="navimg" src="https://www.1mg.com/images/tata_1mg_logo.svg">
+      <div id="an1n">
+        <div>My Cart</div>
+        <div>Upload Prescription
+           
+        </div>
+        <div>Order Summary
+            <hr id="downbar"></hr>
+        </div>
+        <div>Payment</div>
+      </div>
+     <p id="an2n">Need Help?</p>
+      
+    </div>
+
+    <!--form box-->
+         <!--outer box-->
+    <div id="outer_form_box"> 
+        <!--inner form box-->
+        <div id="inner_form_box">
+            <p id="head_form">add new address</p>
+              
+              <!--form box-->
+            <div id="form_box">
+            <form id="form">
+                <input type="text" id="flat_num" placeholder="flat number,building name,street/locality" class="form_style"><br>
+                <input type="text" id="landmark" placeholder="landmark(optional)" class="form_style"><br>
+                <input type="text" id="pincode" placeholder="pincode" class="form_style"><br>
+                <input type="text" id="locality" placeholder="locality" class="form_style"><br>
+                <input type="text" id="city" placeholder="city" class="form_style"><br>
+                <input type="text" id="state" placeholder="state" class="form_style"><br>
+                <input type="text" id="customer_name" placeholder="customer name" class="form_style"><br>
+                <input type="text" id="number" placeholder="10 digit mobile" class="form_style"><br>
+
+                <input type="radio" id="home" name="add" value="home" class="radio_data">
+                <label for="home">Home</label>
+                <input type="radio" id="office" name="add" value="office">
+                <label for="office">Office</label>
+                <input type="radio" id="other" name="add" value="other">
+                <label for="other">Others</label>
+
+            </form>
+            
+
+            <div id="button_footer">
+                <!--cancel button-->
+                <div id="cancel_button">
+                 cancel
+                </div>
+                <!--save button-->
+                <div id="save_button">
+                  save
+                </div>
+
+            </div>
+          
+
+        </div>
+
+        <!--footer part -->
+        <div id="footer">
+            <div>
+                <hr style="width: 95%;">
+                <p style="font-size: 12px; margin-left: 2%;">You will receive a call from registered medical practitioner in<br> the next 30 minutes.
+                    Our working hours are from 8am to midnight.</p>
+               <p style="font-size: 12px; margin-left: 2%;">Order will be confirmed only after receiving the<br>
+                 prescription post appropriate consultation.</p>
+
+                
+            </div>
+            <div>
+                <hr style="width: 95%;">
+                <p style="font-size: 12px;">*1mg Cash will be credited 7 days after your complete order is delivered in <br>
+                    case of Products and in case of Lab Services 1mg Cash will be credited within<br>
+                     24 hours from the time of generation of test report.<br>
+                     1mg Cash will not be credited in case a return request is initiated for the order.</p>
+                
+                     <p style="font-size: 12px;">**Coupon Discount value may change if the total order value changes.</p>
+                     <p style="font-size: 12px;">***Items in your cart will always reflect the most recent price as compared<br>
+                         to the prices in their product detail page.</p>
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+</html>
+<script>
+  
+
+    document.getElementById('cancel_button').addEventListener("click",cancel)
+
+    function cancel(){
+        window.location.reload()
+        
+    }
+
+    document.getElementById('save_button').addEventListener('click',save)
+    
+
+    var s1
+    var add=JSON.parse(localStorage.getItem("address"))||[]
+
+    function save(){
+        event.preventDefault()
+        let flat=document.getElementById('flat_num').value 
+        let landmark=document.getElementById('landmark').value 
+        let pincode=document.getElementById('pincode').value 
+        let locality=document.getElementById('locality').value 
+        let city= document.getElementById('city').value 
+        let state=document.getElementById('state').value 
+        let name= document.getElementById('customer_name').value 
+        let mobile=document.getElementById('number').value 
+        let date= new Date()
+
+        s1= new address(flat,landmark, pincode, locality ,city ,state ,name, mobile,date)
+        add.push(s1)
+       if(flat=="" && pincode=="" && landmark=="" && locality=="" && city=="" && mobile=="" && name=="" && state==""){
+        alert("FILL THE DETAILS")
+       }
+       else if(flat=="" || pincode=="" || landmark=="" || locality=="" || city=="" || mobile=="" || name=="" || state==""){
+      alert("FILL ALL THE DETAILS FIRST")
+       }
+
+       else
+       {
+        localStorage.setItem("address",JSON.stringify(add))
+        window.location.href="ordersummary.html"
+       }
+        
+        
+    }
+
+
+    function address(a,b,c,d,e,f,g,h,i){
+        this.flat=a
+        this.landmark=b
+        this.pincode=c
+        this.locality=d
+        this.city=e
+        this.state=f
+        this.name=g
+        this.mobile=h
+        this.date=i 
+    }
+   
+</script>
