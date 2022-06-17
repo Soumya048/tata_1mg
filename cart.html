@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+      <style>
+
+
+
+/* navbar part--> */
+        body{
+            background-color: whitesmoke;
+        }
+ #cartnav{
+    display:flex; 
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(255, 254, 254);  
+    /* position: fixed; */
+    margin-top: -8px;
+    margin-left:-5px;
+    top:0;
+    left:0;
+    width:101%;
+    height:48px;
+    z-index: 1;
+ }
+ #mininav{
+    display:flex;
+    width:88%;
+ }
+
+ #help{
+    font-size: 12px;
+    letter-spacing: normal; 
+    font-family: sans-serif;
+    
+    color: rgb(10, 10, 10);
+ }
+ #second{
+    width:62%;
+    display:flex;
+    align-items: center;
+ }
+ #logo{
+    width:84%;
+ }
+ input{
+    width:84%;
+    height:28px;
+    border:1px solid #F1F4F6;
+    background-color: #F1F4F6;
+    outline: none;
+ }
+ #logodiv{
+    width:3%;
+    height:32px;
+    background-color: #F1F4F6;
+    font-size: 13px
+ }
+ input::placeholder{
+    letter-spacing: 0.7px;
+    font-family: sans-serif;
+    color:darkgray;
+ }
+ i{
+    color:rgb(138, 136, 136);
+    margin-top: 9px;
+ }
+
+
+
+
+
+ /* bottom part-- */
+
+
+ #bottom{
+    width:76%;
+    margin:auto;
+    margin-top:60px;
+    display:flex;
+    justify-content:space-between;
+    border:1px solid black;
+
+ }
+#left{
+   width:58%;
+    border:1px solid red;
+    /* height: 500px; */
+}
+#right{
+   width:39%;
+    border:1px solid green;
+    padding-top: 15px;
+}
+
+#firstcoupon{
+   display:flex;
+   width:79%;
+}
+#coupon{
+   display:flex;
+   justify-content: space-around;
+   align-items: center;
+   background-color: white;
+   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+ 
+}
+#firstcoupon>h3{
+   margin-left:10px;
+   font-size: 14px;
+   font-family: 'Gill Sans', sans-serif;
+   color:#2B2B2B;
+}
+#secnav{
+   width:6.3%;
+   height:24px;
+   /* border:1px solid  red; */
+   background-color: #E2E2E2;
+   border-radius: 51%;
+   font-size: 19px;
+   font-weight: bolder;
+}
+#secnav>i{
+   margin-top: 1px;
+   margin-left: 9px;
+   font-weight: bold;
+
+}
+#secright{
+   margin-top: 12px;
+   background-color: white;
+   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+ padding-left:13px;
+ padding-right: 13px;
+}
+#secinfo{
+   display:flex;
+   justify-content: space-between;
+}
+#secinfo>p{
+   font-size: 16px;
+   color:#212121;
+   font-family: sans-serif;
+}
+#secinfoicon{
+   padding-top: 10px;
+   
+}
+
+#seccheck{
+   /* border:1px solid red; */
+   width:79%;
+   /* height:100px; */
+   margin-top: -7%;
+   margin-left:10%;
+}
+#thankdiv{
+   width:79%;
+   /* height:100px; */
+   margin-top: -7%;
+   margin-left:10%;
+   display:none;
+}
+#seccheck>#firstpara,#thankdiv>#firstpara{
+   margin-top: 0;
+   margin-bottom: 10px;
+   font-size: 14px;
+   color:#212121DE;
+   font-family: sans-serif;
+}
+#seccheck>#secondpara, #thankdiv>#secondpara{
+   font-family: Verdana, Tahoma, sans-serif;
+   font-size: 11px;
+   color:#616161;
+   line-height: 18px;
+   width:90%;
+   /* margin-top: 0; */
+}
+#secright>#thirdpara{
+   margin-left: 10%;
+   color:#1AAB2A;
+   font-family: sans-serif;
+   font-size: 13px;
+   margin-top: -7px;
+   padding-bottom: 10px;
+}
+#infoinfo{
+   border:1px solid black;
+   background-color: white;
+   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+   width:20%;
+   position: relative;
+   margin-top: -410px;
+   margin-left:76% ;
+   padding:0px 10px 0px 5px;
+   display:none;
+}
+#infoinfo>#firstpara{
+   margin-top: 0;
+   color:grey;
+   font-family: Verdana, Tahoma, sans-serif;
+   font-size: 12px;
+   margin-bottom: 0;
+}
+
+svg:hover body>#infoinfo{
+display:block;
+}
+#supercoin{
+   background-color: white;
+   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+   padding: 10px;
+}
+#supercoin>#headdiv>#firstdiv{
+   display:flex;
+   width:40%;
+}
+#supercoin>#headdiv>#firstdiv>#image{
+   width:24%;
+   height:36px
+}
+#supercoin>#headdiv>#firstdiv>#firstpara{
+   margin-top: 10px;
+   font-family:"Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+   color:#333333;
+   font-size: 16px;
+}
+#headdiv>#seconddiv>#firstpara{
+  color:#767676;
+  font-size: 12px;
+  font-family:Arial,sans-serif ;
+
+}
+#headdiv{
+   display:flex;
+   justify-content: space-between;
+}
+hr{
+   margin-top: 0;
+        height: 1px;
+        background-color: #ccc;
+        border: none;
+    }
+    #hr+p{
+      margin-top: 0;
+      margin-left: 10px;
+      margin-bottom: 8px;
+      font-size: 16px;
+      color:#333333;
+      font-family: Helvetica, sans-serif;
+    }
+    #supercoin>#firstpara>#firstspan{
+      font-size: 12px;
+    }
+    #firstextra{
+
+      /* padding:2px 3px 2px 3px; */
+      margin-left: 10px;
+      /* background-color:#FFE0CC ; */
+      /* color:#8A2422; */
+      display: flex;
+      /* width:70%; */
+      margin-top:0;
+    }
+    #extra{
+      font-size: 11px;
+      font-weight: bolder;
+      margin-top: 0px;
+      letter-spacing: .2px;
+      padding:6px 2px 6px 2px;
+      background-color: #FFE0CC     
+    }
+    #supercoin>#lastpara{
+      margin-left: 11px;
+      margin-top: -10px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ff6f61;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 5px;
+    cursor: pointer;
+    }
+    /* #first{
+       display:grid;
+       grid-template-columns: repeat(17,1fr);
+       overflow:hidden;
+    }
+    #append_div{
+       width:200px;;
+       height:400px;
+       text-align: center;
+    }
+    #append_div>#thirddiv,#fourthdiv,#seconddiv{
+       display:flex;
+    }
+    #append_div>img{
+       width:40%;
+       height:40%;
+    }
+    #append_div>h3{
+      -webkit-box-orient: vertical;
+    color: #2b2b2b;
+    display: -webkit-box;
+    font-size: 14px;
+    -webkit-line-clamp: 2;
+    max-height: 40px;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-overflow: -o-ellipsis-lastline;
+    white-space: pre-wrap
+    } */
+  
+     #firstleft{
+       background-color: white;
+       margin-top: -13px;
+       
+    }
+    #firstleft>#firstdiv{
+     padding:10px;
+    }
+
+    #firstleft>#firstdiv>#seconddiv{
+        
+       display:flex;
+       justify-content: space-between;
+    }
+
+    #firstleft>#firstdiv>#fifthdiv,
+    #firstleft>#firstdiv>#eighthdiv{
+       display:flex;
+       /* border:1px solid green; */
+       justify-content: space-between;
+       align-items: center;
+    }
+    #firstleft>#firstdiv>#eighthdiv>#seventhdiv{
+       /* border:1px solid green; */
+       display:flex;
+       /* width:50%; */
+
+       align-items: center;
+    }
+    #pricespan{
+       text-decoration: line-through;
+    }
+    #firstleft>#firstdiv>#eighthdiv>#sixthdiv{
+       display:flex;
+    }
+    #firstleft>#firstdiv>#eighthdiv{
+       display:flex;
+       justify-content: space-between;
+    }
+    #titleh3{
+       width:60%;
+    color:black;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT',  'Trebuchet MS', sans-serif sans-serif;
+
+    }
+    #titlepriceh3{
+      color:black;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT',  'Trebuchet MS', sans-serif sans-serif;
+    }
+    #firstleft>#firstdiv>#fifthdiv>#thirddiv{
+      font-size: 11px;
+    margin-top: 10px;
+    color: #9e9e9e;
+    font-weight: 700;
+    margin-top: 0;
+    }
+    #firstleft>#firstdiv>#fifthdiv>#fourthdiv{
+      color: #9e9e9e;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: Helvetica,Arial,sans-serif;
+    }
+    #firstleft>#firstdiv>#fifthdiv{
+       margin-top: -17px;
+    }
+    #sixthdiv>p{
+      color: #9e9e9e;
+      font-size: 11px;
+      margin-left: 3px;
+      font-family: Helvetica,Arial,sans-serif;;
+
+    }
+    #totalspan{
+       padding-top: 0;
+    }
+    ::-webkit-scrollbar{
+       overscroll-behavior-x: hide;
+    }
+    #totalbill{
+       background-color: white;
+       margin-top: 34px;
+    }
+    #totalbill>div{
+       margin:-20px 12px 0px 12px;
+       display:flex;
+       justify-content: space-between;
+       align-items: center;
+    }
+    #totalbill>div>p{
+      color: #757575;
+    font-size: 12px;
+    line-height: 1.8rem
+    }
+    #totalbill>#secondlastdiv>p{
+      color: #757575;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 15px;
+    }
+    #totalbill>#lastdiv{
+      background-color: #e4f6e7;
+      margin:-10px 0px 20px 0px;
+    /* padding: -10px 0; */
+    height:40px;
+    width:100%
+    }
+    #greenp{
+       margin-left: 13px;
+       color: #757575;
+    font-size: 12px;
+    line-height: 1.8rem;
+    }
+    #totalsavp{
+       margin-right: 13px;
+       
+    font-size: 16px;
+    font-weight: 800;
+    }
+    #checkout{
+       background-color: white;
+       padding:3px 20px 3px 20px;
+       margin-bottom: 30px;
+    }
+    #checkout2{
+       background-color:#ff6f61 ;
+       color:white;
+       font-size: 14px;
+       text-align: center;
+       margin-bottom: 10px;
+       padding: 10px 0px 10px 0px;
+    }
+    #locationtext{
+      color: #666565;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 500;
+    }
+   
+    
+   
+   
+    
+
+
+
+
+
+
+
+
+      </style>
+</head>
+<body>
+
+    <!-- navbar-->
+    <div id="cartnav">
+   
+
+<div id="mininav">
+
+    <div id="first">
+        <img src="https://www.1mg.com/images/tata_1mg_logo.svg" alt="logo" id="logo">
+    </div>
+
+    <div id="second">
+        <input type="text" id="searchproduct"  placeholder="Search for Medicines and Health Products">
+       <div id="logodiv">
+            <i class="fa fa-search"></i>
+       </div>
+    </div>
+       
+</div>
+
+<div id="third">
+    <span id="help">Need Help?</span>
+</div>
+
+     </div>
+
+     <!-- bottom part -->
+
+     <div id="bottom">
+        <div id="left">
+         <p>Items NOT Requiring Prescription (<span id="totalspan"></span>)</p>
+      <div id="firstleft">      
+
+
+
+</div>
+
+
+        </div>
+        
+
+        <div id="right">
+
+
+   <div id="coupon">
+            <div id="firstcoupon">
+            <img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1607414999/marketing/cvtnx1zh5we6atn3m7i0.svg" alt="coupon logo">
+            <h3>Apply Coupon</h3>
+         </div>
+
+       <div id="secnav">
+         <!-- <i class="fa fa-angle-right" style="color: black;"></i> -->
+         <i class="fa fa-angle-right" style="color:black;"></i>
+       </div>
+   </div>   
+
+   
+   
+ <div id="secright">
+   <div id="secinfo">
+      <p>Check the health of your vital organs</p>
+      <div id="secinfoicon">
+      <svg  width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="none" d="M0 24h24V0H0z"></path><path d="M12 9.694c.37 0 .667.298.667.667v6.165a.667.667 0 11-1.333 0v-6.165c0-.369.298-.667.666-.667M12 6.807c.54 0 .98.434.98.968 0 .533-.44.97-.98.97a.977.977 0 01-.979-.97c0-.534.44-.968.98-.968" fill="#3B3B3B"></path><path d="M12 20.065c4.447 0 8.065-3.618 8.065-8.065 0-4.447-3.618-8.065-8.065-8.065-4.447 0-8.065 3.618-8.065 8.065 0 4.447 3.618 8.065 8.065 8.065m0-17.464c5.183 0 9.398 4.217 9.398 9.4 0 5.181-4.215 9.397-9.398 9.397S2.602 17.182 2.602 12c0-5.182 4.215-9.399 9.398-9.399" fill="#3B3B3B"></path></g></svg>
+      </div>
+   </div>
+        
+
+      <input type="checkbox" style="width:19px">
+      <div id="seccheck">
+       <p id="firstpara">Book Good Health Silver Package for just ₹649</p>
+       <p id="secondpara">Get the tests done easily from your home. This package will help you in identifying potential disorders and deficiencies at an early stage.</p>
+      </div>
+
+
+      <div id="thankdiv">
+         <p id="firstpara">Thank you for your interest</p>
+         <p id="secondpara">Our team will call you to book a slot as per your convenience.</p>
+        </div>
+      
+
+      <p id="thirdpara">
+         Pay later on home sample collection
+      </p>
+ </div>
+
+
+ 
+<div id="supercoin">
+   <div id="headdiv">
+   <div id="firstdiv">
+   <img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1645088829/210921_TataNeu_appicon_light_24px_circle_3_1x_vxwibw.png" alt="" id="image">
+  <p id="firstpara"> My NeuCoins</p>
+   </div>
+
+     <div id="seconddiv">
+      <p id="firstpara">Balance:<b>0 NeuCoin</b></p>
+     </div>
+   </div>
+
+   <hr id="hr">
+      <p id="firstpara"> <b> 197</b> NeuCoins <span id="firstspan">to be earned on this order* </span></p>
+
+         <div id="firstextra">
+         <img src="https://onemg.gumlet.io/image/upload/v1632494429/jyjhkjmghzvoxovlqmli.png" alt="" id="firstimage" style="width:3%; height: 16px;background-color: #FFE0CC;padding: 3px 0 5px 2px;">
+         <p id="extra">Extra 196 NeuCoins for care Plan members</p>
+         <img src="https://onemg.gumlet.io/image/upload/v1632494457/sleif8m2hf1wj1jp0ylp.png" alt="" id="secondimage" style="width:3%;height: 16px;margin-top: 4px; margin-left:5px;color:grey">
+      </div>
+
+      <p id="lastpara">Add care plan to cart</p>
+
+ </div>
+
+
+
+
+<div id="totalbill">
+   <div id="firstdiv">
+      <p>Item Total(MRP)</p>
+      <p id="totalp"></p>
+   </div>
+
+   <div id="seconddiv">
+      <p>Price Discount</p>
+      <p id="discp"></p>
+   </div>
+   <hr>
+   <div id="thirddiv">
+      <p>Shipping Fee</p>
+      <p>₹0</p>
+   </div>
+
+   <div id="fourthdiv">
+      <p>Packaging and Handling Charges</p>
+      <p id="packagingp"></p>
+      <!-- <img src="https://onemg.gumlet.io/image/upload/v1632494457/sleif8m2hf1wj1jp0ylp.png" alt="" id="secondimage" style="width:7%;height: 13px;margin-top:-50%; margin-left:50%;color:grey"> -->
+   </div>
+   <hr>
+   <div id="secondlastdiv">
+      <p>To be paid</p>
+      <p id="tobepaidp"> </p>
+   </div>
+
+   <div id="lastdiv">
+      <p id="greenp">Total Savings</p>
+      <p id="totalsavp"> </p>
+   </div>
+</div>
+
+
+<div id="checkout">
+   <div id="first">
+      <p id="locationtext">Your delivery location</p>
+      <p id="location"></p>
+   </div>
+   <div id="checkout2">CHECKOUT</div>
+</div>
+
+
+
+   
+ 
+
+
+
+
+
+        </div>
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </div>
+     <div id="infoinfo">
+      <p id="firstpara">This package is a group of tests that indicates the presence of any disease or abnormality. It tells you about your general health and gives you basic facts about your well being. Note: Availability and pricing of tests will depend on your city. Our health experts will confirm over the call</p>
+   </div> 
+
+
+
+
+
+</body>
+</html>
+
+<!--for icon -->
+<!-- <script src="https://kit.fontawesome.com/fc98eb8266.js" crossorigin="anonymous"></script> -->
+
+
+
+<script>
+
+let ORSL=[
+   {"title":"ORSL Plus Orange Drink",
+     "price":42,
+     "off":14 ,
+     "type":"packet",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1604321398/mxj5kjfy5ltrwpptxqno.jpg",
+     "rate":4.2,
+     "total_ratings":174,
+     "count":"200 ml Liquid",
+     "quantity":1
+
+},
+{"title":"ORSL Liquid Apple",
+     "price":37,
+     "off":5 ,
+     "type":"packet",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1611060874/tlvslmhbzlyqvay1elun.jpg",
+     "rate":4.6,
+     "total_ratings":45,
+     "count":"200 ml Liquid",
+     "quantity":1
+
+},
+{"title":"ORSL Rehydrate Drink Orange",
+     "price":37,
+     "off":5 ,
+     "type":" packets",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1652729328/jsg83gdvb5crydoe84gu.jpg",
+     "rate":4.5,
+     "total_ratings":31,
+     "count":"200 ml Liquid",
+     "quantity":1
+
+},
+{"title":"ORSL Rehydrate Drink Apple",
+     "price":37,
+     "off":0 ,
+     "type":" packet",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1652729328/jsg83gdvb5crydoe84gu.jpg",
+     "rate":4.5,
+     "total_ratings":37,
+     "count":"200 ml Liquid",
+     "quantity":1
+
+},
+{"title":"RSL Liquid Lemon",
+     "price":37,
+     "off":11 ,
+     "type":"packet",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1604321466/l6jslz1v3tv4mvgsqrde.jpg",
+     "rate":4.2,
+     "total_ratings":31,
+     "count":"200 ml Liquid",
+     "quantity":1
+
+},
+{"title":"RSL Liquid Lemon",
+     "price":42,
+     "off":4 ,
+     "type":"packet",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1632137000/wcojmfhtuqatmu91sptc.jpg",
+     "rate":4,
+     "total_ratings":9,
+     "count":"200 ml Liquid",
+     "quantity":1
+
+},
+]
+
+let DOD=[
+{"title":"Tata 1mg Digital Thermometer",
+     "price":105,
+     "off":4 ,
+     "type":"box",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1653505842/sunqcfmxhmpwx32hnewh.jpg",
+     "rate":3.9,
+     "total_ratings":147,
+     "count":"Unit",
+     "quantity":1
+},
+{"title":"Vicks Vaporub",
+     "price":155,
+     "off": 6,
+     "type":"bottle",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1609419124/wb4ndsavl7ixslwyohbi.jpg",
+     "rate":4.5,
+     "total_ratings":1588,
+     "count":"50 gm Balm",
+     "quantity":1
+},
+{"title":"Limcee Chewable Tablet Orange",
+     "price":23.50,
+     "off": 13,
+     "type":"strip",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1600107686/cropped/grnlvnbgtzcoehyotnnt.jpg",
+     "rate":4.5,
+     "total_ratings":7933,
+     "count":"15 Chewable Tablets",
+     "quantity":2
+},
+{"title":"Tata 1mg Biotin Tablet",
+     "price":325,
+     "off": 39,
+     "type":"bottle",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1652986594/t9qw0l8jkffddcwaboco.jpg",
+     "rate":4.2,
+     "total_ratings":217,
+     "count":"30 tablets",
+     "quantity":1
+},
+{"title":"Cadbury Bournvita Health Drink Chocolate",
+     "price":110,
+     "off": 3,
+     "type":"jar",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1652986594/t9qw0l8jkffddcwaboco.jpg",
+     "rate":4.3,
+     "total_ratings":213,
+     "count":"200 gm Powder",
+     "quantity":1
+},
+{"title":"Tata 1mg BIS Approved FFP2 N95 Mask - Head Loop 2 Mask",
+     "price":190,
+     "off": 50,
+     "type":"box",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1641378789/rbaugppr9gb507pafj1k.jpg",
+     "rate":3.9,
+     "total_ratings":257,
+     "count":"2 masks",
+     "quantity":1
+},
+{"title":"Dabur Hajmola Anardana",
+     "price":55,
+     "off": 5,
+     "type":"bottle",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1632982064/wkbkskdnlzxezi9cy1lx.jpg",
+     "rate":4.5,
+     "total_ratings":1304,
+     "count":"120 tablets",
+     "quantity":1
+},
+{"title":"Becosules Capsule",
+     "price":45.67,
+     "off": 16,
+     "type":"strip",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1600086252/cropped/kjkqva2kdbkqwawswcu4.jpg",
+     "rate":4.5,
+     "total_ratings":2954,
+     "count":"20 capsules",
+     "quantity":1
+},
+{"title":"Tata 1mg Immunity & Wellness Supplement Tablet",
+     "price":99,
+     "off": 10,
+     "type":"bottle",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1649963382/f6t1ibz3qh3ag0o486xv.jpg",
+     "rate":4.6,
+     "total_ratings":20,
+     "count":"15 tablets",
+     "quantity":1
+},
+{"title":"Dettol Antiseptic Disinfectant Liquid",
+     "price":33.27,
+     "off": 7,
+     "type":"bottle",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1652077812/brrgyssrb6iqffjli3mz.jpg",
+     "rate":4.6,
+     "total_ratings":11175,
+     "count":"60 ml Liquid",
+     "quantity":1
+},
+{"title":"Tata 1mg Glucosamine HCL 1500 mg Tablets for Joint Health with Boswellia Serrata, Collagen Peptide, L-Arginine, and Curcuma Longa",
+     "price":535,
+     "off": 55,
+     "type":"bottle",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1637324453/mkiyuzyov7kliuvl28sr.jpg",
+     "rate":4.1,
+     "total_ratings":282,
+     "count":"30 tablets",
+     "quantity":1
+},
+{"title":"Depura 60000 IU Vitamin D3 Oral Solution, Helps Keep Bones Healthy, Aids in Boosting Immunity Sugar Free",
+     "price":94.99,
+     "off": 19,
+     "type":"bottle",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1626977269/atrzjjj1uxm5slptazi6.jpg",
+     "rate":4.5,
+     "total_ratings":585,
+     "count":"5 ml Oral Solution ",
+     "quantity":1
+},
+{"title":"Himalaya Neem & Turmeric Soap",
+     "price":50,
+     "off": 10,
+     "type":"packet",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1600666548/cropped/sq90xrsd0094ag5kxluv.jpg",
+     "rate":4.5,
+     "total_ratings":325,
+     "count":"125 gm Soap",
+     "quantity":1
+},
+{"title":"ORSL Plus Orange Drink",
+     "price":42,
+     "off": 14,
+     "type":"packet",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1604321398/mxj5kjfy5ltrwpptxqno.jpg",
+     "rate":4.2,
+     "total_ratings":174,
+     "count":"2000 ml Liquid",
+     "quantity":1
+},
+{"title":"Otrivin Oxy Fast Relief Adult Nasal Spray",
+     "price":96.8,
+     "off": 13,
+     "type":"bottle",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1618942125/uaerylojm65fdh0o0dfo.jpg",
+     "rate":4.4,
+     "total_ratings":1211,
+     "count":"10 ml Nasal Spray",
+     "quantity":1
+},
+{"title":"Vicks Cough Drops Ginger",
+     "price":20,
+     "off": 3,
+     "type":"packet",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1600999835/cropped/ll0myoxgncakojbqrye9.png",
+     "rate":4.6,
+     "total_ratings":83,
+     "count":"20 lozenges",
+     "quantity":1
+},
+{"title":"Walyte ORS Powder Orange",
+     "price":4.53,
+     "off": 11,
+     "type":"sachet",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1600999835/cropped/ll0myoxgncakojbqrye9.png",
+     "rate":4.5,
+     "total_ratings":377,
+     "count":"4.4 gm Powder",
+     "quantity":1
+},
+{"title":"Hansaplast Silverhealing Washproof",
+     "price":33,
+     "off": 27,
+     "type":"packet",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1600999835/cropped/ll0myoxgncakojbqrye9.png",
+     "rate":4.5,
+     "total_ratings":316,
+     "count":"10 bandages",
+     "quantity":2
+},
+{"title":"Boroline Cream",
+     "price":40,
+     "off": 5,
+     "type":"tube",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1600107647/cropped/kgbk3tvgjvcgjmqws6cp.jpg",
+     "rate":4.7,
+     "total_ratings":2452,
+     "count":"20 gm Cream",
+     "quantity":1
+},
+{"title":"Cofsils Lozenges Lemon Ginger",
+     "price":30,
+     "off": 20,
+     "type":"strip",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1649674058/nrhwztc5ffpoqvtzvlhf.jpg",
+     "rate":4.5,
+     "total_ratings":835,
+     "count":"10 lozenges",
+     "quantity":1
+},
+]
+
+
+
+let spotlight=[
+{"title":"Baidyanath Kesari Kalp Royal Chyawanprash Promotes Vitality, Strength & Stamina",
+     "price":410,
+     "off": 27,
+     "type":"jar",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1642142008/sotrimm6r6qrtbt5qtmw.jpg",
+     "rate":4.2,
+     "total_ratings":545,
+     "count":"500 gm Paste",
+     "quantity":1
+},
+{"title":"Dabur Ratnaprash",
+     "price":990,
+     "off": 5,
+     "type":"jar",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1618856503/obmttbsls6pr0sbpvaql.jpg",
+     "rate":4.4,
+     "total_ratings":93,
+     "count":"900 gm Paste",
+     "quantity":1
+},
+{"title":"Zandu Chyavanprashad Sugar Free",
+     "price":375,
+     "off": 18,
+     "type":"jar",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1631038258/wdqsc0obd6rkvcnxzyh1.jpg",
+     "rate":4.2,
+     "total_ratings":395,
+     "count":"900 gm Paste",
+     "quantity":1
+},
+{"title":"Baidyanath Chyawanprash Special Immunity Booster for OmniProtection with Madhu Free 50gm",
+     "price":360,
+     "off": 32,
+     "type":"jar",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1642551330/r4q79nrsaa1tfaxfvbn7.jpg",
+     "rate":4.2,
+     "total_ratings":670,
+     "count":"950 gm Paste",
+     "quantity":1
+},
+{"title":"Dabur Chyawanprash Awaleha",
+     "price":550,
+     "off": 6,
+     "type":"jar",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1634892019/bbtdisfjbfdbpfao3svf.jpg",
+     "rate":4.4,
+     "total_ratings":6606,
+     "count":"1.5 kg Paste",
+     "quantity":1
+},
+{"title":"Baidyanath Chyawan-Vit Sugarfree Chyawanprash for Boosting Immunity",
+     "price":415,
+     "off": 30,
+     "type":"jar",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1652898801/gnmjm7tori3nbododphb.jpg",
+     "rate":4.1,
+     "total_ratings":378,
+     "count":"1 kg Paste",
+     "quantity":1
+},
+{"title":"Baidyanath Kesari Kalp Royal Chyawanprash Promotes Vitality, Strength & Stamina",
+     "price":410,
+     "off": 27,
+     "type":"jar",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1642142008/sotrimm6r6qrtbt5qtmw.jpg",
+     "rate":4.2,
+     "total_ratings":545,
+     "count":"500 gm Paste",
+     "quantity":1
+},
+{"title":"Baidyanath Junior Prash for the All Rounders Energy Immunity Strength",
+     "price":325,
+     "off": 33,
+     "type":"jar",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1600216173/cropped/oenna1ujvzdt8cpioj2d.png",
+     "rate":4.3,
+     "total_ratings":61,
+     "count":"1 kg Paste",
+     "quantity":1
+},
+{"title":"Zandu Kesari Jeevan Fit for Diabetics",
+     "price":770,
+     "off": 15,
+     "type":"jar",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1600216173/cropped/oenna1ujvzdt8cpioj2d.png",
+     "rate":4.5,
+     "total_ratings":154,
+     "count":"900 gm Paste",
+     "quantity":1
+},
+{"title":"Baidyanath Junior Prash for the All Rounders Energy Immunity Strength",
+     "price":180,
+     "off": 30,
+     "type":"jar",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1600216175/cropped/gr8vhuhcjhviownyg3o7.png",
+     "rate":4.3,
+     "total_ratings":61,
+     "count":"500 gm Paste",
+     "quantity":1
+},
+{"title":"Zandu Kesari Jeevan Fit for Diabetics",
+     "price":435,
+     "off": 10,
+     "type":"jar",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1631039231/dnwxwpamlerzsygb4os5.jpg",
+     "rate":4.5,
+     "total_ratings":154,
+     "count":"450 gm Paste",
+     "quantity":1
+},
+{"title":"Baidyanath Chyawanprash Special Immunity Booster for OmniProtection",
+     "price":108,
+     "off": 29,
+     "type":"jar",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1600174119/cropped/vvjeblsj3m318r0pdlxo.jpg",
+     "rate":4.2,
+     "total_ratings":670,
+     "count":"250 gm Paste",
+     "quantity":1
+},
+{"title":"Baidyanath Chyawanprash Special Immunity Booster for OmniProtection",
+     "price":725,
+     "off": 35,
+     "type":"jar",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1644476893/yntfitrqnraerfqz6nzn.jpg",
+     "rate":4.2,
+     "total_ratings":670,
+     "count":"2 kg Paste",
+     "quantity":1
+},
+{"title":"Sandu Chyavanprash Special",
+     "price":190,
+     "off": 0,
+     "type":"jar",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1649144440/rxbnjh2lctuchhtaz5ym.jpg",
+     "rate":5,
+     "total_ratings":3,
+     "count":"500 gm Paste",
+     "quantity":1
+},
+{"title":"Sandu Makarprash",
+     "price":860,
+     "off": 9,
+     "type":"jar",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1649144739/ywxoxgnln4xihfnyxnrl.jpg",
+     "rate":4.5,
+     "total_ratings":8,
+     "count":"1 kg Paste",
+     "quantity":1
+},
+{"title":"Baidyanath Chyawan-Vit Sugarfree Chyawanprash for Boosting Immunity",
+     "price":221,
+     "off": 30,
+     "type":"jar",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1600167495/cropped/crqoyzk9fbxvdpdk2efj.png",
+     "rate":4.5,
+     "total_ratings":378,
+     "count":"500 gm Paste",
+     "quantity":1
+},
+{"title":"Sandu Makarprash",
+     "price":500,
+     "off": 2,
+     "type":"jar",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1649144769/lerb40ylzrsmpzcuzajj.jpg",
+     "rate":4.5,
+     "total_ratings":8,
+     "count":"500 gm Paste",
+     "quantity":1
+},
+]
+
+
+
+
+
+
+
+// append(spotlight)
+// function append(data){
+//    //  let cont=document.getElementById("firstleft")
+//     data.forEach((el)=>{
+//         let div = document.createElement("div")
+//         div.setAttribute("id","append_div")               
+//         let image = document.createElement("img")
+//         image.src=el.image;
+//         let h3 = document.createElement("h3")
+//         h3.setAttribute("id","firsth3")
+//         h3.innerText=el.title;
+//         let p =document.createElement("p")
+//         p.setAttribute("id","firstpara")
+//         p.innerText=el.type+ "of"+el.count
+//         let div2 = document.createElement("div")
+//         div2.setAttribute("id","seconddiv")
+//         let span1 = document.createElement("span")
+//         span1.setAttribute("id","firstspan")
+//         span1.innerHTML=`${el.rate}<i class="fa fa-star"></i>`
+//         let span2 = document.createElement("span")
+//         span2.setAttribute("id","secondspan")
+//         span2.innerText=el.total_ratings+ " ratings";
+//         div2.append(span1,span2)
+//         let div3 = document.createElement("div")
+//         div3.setAttribute("id","thirddiv")
+//       let p1 = document.createElement("P")
+//       p1.setAttribute("id","firstpara")
+//       p1.innerText=el.price;
+//       let p2 = document.createElement("P")
+//       p2.setAttribute("id","secondpara")
+//       p2.innerText=el.off+"%"+"off"
+//       div3.append(p1,p2)
+//       let div4 =document.createElement("div4")
+//       div4.setAttribute("id","fourthdiv")
+//       let p3 = document.createElement("P")
+//       p3.setAttribute("id","firstpara")
+//       p3.innerText=Math.floor(el.price-((el.price*el.off)/100))
+//       let p4 = document.createElement("P")
+//       p4.setAttribute("id","secondpara")
+//       p4.setAttribute("id","addp")
+//       p4.innerText="Add"
+//       // p4.addEventListener("click",clickme)
+//       div4.append(p3,p4)
+//       div.append(image,h3,p,div2,div3,div4)
+//       // cont.append(div)
+//     })
+// }
+
+
+
+
+
+
+
+
+let datas = [
+   {"title":"ORSL Plus Orange Drink",
+     "price":42,
+     "off":14 ,
+     "type":"packet",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1604321398/mxj5kjfy5ltrwpptxqno.jpg",
+     "rate":4.2,
+     "total_ratings":174,
+     "count":"200 ml Liquid",
+     "quantity":1
+
+},
+{"title":"ORSL Liquid Apple",
+     "price":37,
+     "off":5 ,
+     "type":"packet",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1611060874/tlvslmhbzlyqvay1elun.jpg",
+     "rate":4.6,
+     "total_ratings":45,
+     "count":"200 ml Liquid",
+     "quantity":1
+
+},
+{"title":"ORSL Rehydrate Drink Orange",
+     "price":37,
+     "off":5 ,
+     "type":" packets",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1652729328/jsg83gdvb5crydoe84gu.jpg",
+     "rate":4.5,
+     "total_ratings":31,
+     "count":"200 ml Liquid",
+     "quantity":1
+
+},
+{"title":"ORSL Rehydrate Drink Orange",
+     "price":37,
+     "off":5 ,
+     "type":" packets",
+     "image":"https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1652729328/jsg83gdvb5crydoe84gu.jpg",
+     "rate":4.5,
+     "total_ratings":31,
+     "count":"200 ml Liquid",
+     "quantity":1
+
+}]
+
+localStorage.setItem("user", JSON.stringify(datas))
+
+
+let data= JSON.parse(localStorage.getItem("user"))
+
+
+
+
+
+
+
+
+
+append(data)
+
+function append(data){
+   document.getElementById("firstleft").innerHTML=null
+   document.getElementById("totalspan").innerText=data.length
+   data.forEach((el,index)=>{
+      let div=document.createElement("div")
+      div.setAttribute("id","firstdiv")
+      let div2=document.createElement("div")
+      div2.setAttribute("id","seconddiv")
+      let h31= document.createElement("h2")
+      h31.setAttribute("id","titleh3")
+      h31.innerText=el.title;
+      let h32 = document.createElement("h3")
+      h32.setAttribute("id","titlepriceh3")
+      let dis_price=Math.floor(el.price-((el.price*el.off)/100))
+      h32.innerText= "₹"+ (dis_price*el.quantity)
+      div2.append(h31,h32)
+      let div3=document.createElement("div")
+      div3.setAttribute("id","thirddiv")
+      div3.innerHTML=`${el.type} of ${el.count}`
+      let div4=document.createElement("div")
+      div4.setAttribute("id","fourthdiv")
+      div4.innerHTML=`<p id="pricepara"> MRP <span id="pricespan">₹${el.price*el.quantity}</span></p>`
+      let div5=document.createElement("div")
+      div5.setAttribute("id","fifthdiv")
+      div5.append(div3,div4)
+
+
+
+   
+      
+
+let image1=document.createElement("img")
+image1.src="https://img.1mg.com/images/delete_icon.svg"
+image1.addEventListener("click",()=>{
+         removeme(el,index)
+      })
+
+let p1=document.createElement("p")
+p1.innerText="Remove";
+p1.addEventListener("click",()=>{
+         removeme(el,index)
+      })
+let div6 = document.createElement("div")
+      div6.setAttribute("id","sixthdiv")
+      div6.append(image1,p1)
+      
+      let div7 = document.createElement("div")
+      div7.setAttribute("id","seventhdiv")
+      let image2=document.createElement("img")
+     
+image2.src="https://www.1mg.com/images/minus-cart.svg"
+image2.addEventListener("click",()=>{
+         decrease(el,index)
+      })
+let image3=document.createElement("img")
+image3.src="https://www.1mg.com/images/plus-cart.svg"
+image3.addEventListener("click",()=>{
+         increase(el,index)
+      })
+let p2=document.createElement("p")
+p2.innerText=el.quantity
+console.log(el.quantity)
+      div7.append(image2,p2,image3)
+      let div8=document.createElement("div");
+      div8.setAttribute("id","eighthdiv")
+      div8.append(div6,div7)
+
+
+   
+
+
+      div.append(div2,div5,div8)
+      document.getElementById("firstleft").append(div);
+   })
+}
+
+function increase(el,index){
+   console.log(data[index])
+   data[index].quantity++;
+   append(data)
+   localStorage.setItem("user", JSON.stringify(data))
+   totalamount(data)
+
+}
+function decrease(el,index){
+   if(el.quantity==1){
+      removeme(el,index)
+   }
+   else{ 
+   data[index].quantity--;
+   totalamount(data)
+   localStorage.setItem("user", JSON.stringify(data))
+   append(data)
+
+}
+}
+
+
+function removeme(el,index){
+   data.splice(index,1)
+   localStorage.setItem("user", JSON.stringify(data))
+   append(data)
+   totalamount()
+
+
+}
+
+
+
+
+
+
+function totalamount(data){
+   let sum = data.reduce((accumulator, el) => {
+  return accumulator + el.price*el.quantity},0)
+  document.getElementById("totalp").innerHTML=`₹${sum}`
+
+  let sum2 = data.reduce((accumulator, el) => {
+  return accumulator + (Math.ceil((el.price*el.off)/100)*el.quantity)
+  },0)
+
+  document.getElementById("discp").innerHTML=`-₹${sum2}`
+
+let sum3=0;
+if(sum<500){
+   document.getElementById("packagingp").innerText=`₹29`
+   sum3=sum-sum2+29
+   // console.log(sum3)
+}
+else if(sum>500 && sum<1000){
+   document.getElementById("packagingp").innerText=`₹19`
+   sum3=sum-sum2+19
+
+}
+else{
+   document.getElementById("packagingp").innerText=`₹5`
+   sum3=sum-sum2+5
+
+}
+document.getElementById("tobepaidp").innerText=`₹${sum3}`
+document.getElementById("totalsavp").innerText=`₹${sum2}`
+document.getElementById("totalsavp").style.color="#1aab2a"
+document.getElementById("totalsavp").style.fontSize="16px"
+}
+totalamount(data)
+
+
+
+
+
+
+
+</script>
