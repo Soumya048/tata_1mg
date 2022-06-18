@@ -1,0 +1,107 @@
+#body_dispatch{
+    background-color:#f8f8f8 ;
+    /* border: 1px solid; */
+}
+#order_dispatch{
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    background-color: white;
+    margin-bottom: 50px;
+}
+#order_dispatch>div{
+    /* border: 1px solid; */
+}
+#order_dispatch>div>h2{
+    color: #ff6f61;
+}
+.fa-regular{
+    color: #ff6f61;
+    margin-right: 10px;
+}
+#Courier_Details{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+#estimeted{
+    display: flex;
+    justify-content: space-around;
+    
+    background-color:#e8f6e9 ;
+    margin: auto;
+}
+#estimeted>div>p{
+    color:#07ae1a ;
+    font-weight: bold;
+    
+}
+#tracking>a{
+    color: #ff6f61;
+    font-size: 14px;
+}
+a{
+    text-decoration: none;
+}
+#main_dody_part{
+   display: grid;
+   grid-template-columns: 60% 30%;
+   gap: 30px;
+    /* border: 1px solid yellow; */
+    /* height: 200px; */
+    
+}
+#main_dody_part>div{
+    /* border: 1px solid red; */
+    width: 95%;
+   
+}
+#total_payable{
+    /* border: 1px solid green; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    /* width: 90%; */
+    margin: auto;
+    margin-bottom: 50px;
+}
+#value{
+    font-size: 11px;
+}
+#shadow{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background-color: white;
+}
+#invoice{
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color: white; */
+    width: 95%;
+    margin: auto;
+}
+#invoice_box{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color: white;
+}
+#order_id{
+    display: flex;
+    justify-content: space-between;
+}
+#order_date{
+    display: flex;
+    justify-content: space-between;
+}
+#NEED_HELP{
+    width: 30%;
+    margin: auto;
+    color: #ff6f61;
+}
+#mainbox{
+    /* border: 1px solid red; */
+    width: 95%;
+    margin: auto;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
