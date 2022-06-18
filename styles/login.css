@@ -1,0 +1,81 @@
+#container {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: auto;
+    margin-top: 20px;
+}
+
+#left {
+    /* border: 1px solid red; */
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    /* border-right: 1px solid gray; */
+}
+
+#right {
+
+    /* border: 1px solid red; */
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+
+}
+
+#right p,
+h1,
+input {
+    padding: 10px;
+    /* font-weight: bold; */
+}
+
+#sign_input {
+    border: none;
+    border-bottom: 2px solid red;
+    text-decoration: none;
+    width: 76%;
+    margin-bottom: 50px;
+    outline: 0px;
+}
+
+#sign_btn {
+    padding: 10px 32%;
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#left img {
+    height: 150px;
+}
+
+#sign_bottom_div {
+    text-align: center;
+    width: 75%;
+    /* border: 1px solid red; */
+}
+
+#sign_bottom_div p {
+    padding: 0px;
+
+}
+
+#sign_bottom_div a {
+    color: #FF6F61;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.otp_text {
+    font-weight: bold;
+}

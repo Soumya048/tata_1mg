@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- left div -->
+      <div id="left">
+        <img
+          src="https://www.1mg.com/images/login-signup/Home-Delivery-of-Medicines.png"/>
+          <h2>Medicines,Home Delivered</h2>
+          <h3>Order any medicine or health product <br> and we'll deliver it for free. Enjoy <br>  discounts on everything </h3>
+      </div>
+
+      <!-- right div -->
+      <div id="right">
+        <h1>Verify OTP</h1>
+        <p id="ottp">
+        hello
+        </p>
+        <input type="number" placeholder="One Time Pssword" id="sign_input" />
+        <br />
+        <br />
+        <button onclick="otpFun()" id="sign_btn">DONE</button>
+        <div id="sign_bottom_div">
+          <p>New on 1mg? <a href="login.html">Sign Up</a></p>
+          <p>Have a corporate account? <a href="signup.html">Click Here</a></p>
+          <p>
+            By logging in, you agree to our <br />
+            Terms and Conditions & Privacy Policy
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  
+let user_number=localStorage.getItem('number')
+
+document.getElementById('ottp').innerText=  `Provide Otp Sent to ${user_number}`
+  function otpFun() {
+   
+    let input = document.getElementById("sign_input").value;
+
+
+    
+
+    if (input == "7334") {
+      alert("Singn up Success");
+    } else {
+      alert("wrong otp");
+    }
+  }
+</script>

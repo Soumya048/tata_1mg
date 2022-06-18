@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- left div -->
+      <div id="left">
+        <img
+          src="https://www.1mg.com/images/login-signup/Health-Related-Queries.png" alt=""/>
+          <h2>Health Related Queries ?</h2>
+          <h3>Consult our certified doctors from  anywhere, <br> anytime and free. We gaurantee your privacy.</h3>
+      </div>
+
+      <!-- right div -->
+      <div id="right">
+        <h1>Login</h1>
+        <p class="otp_text">
+          Get access to your orders, lab tests & doctor consultations
+        </p>
+        <input
+          type="text"
+          placeholder="Enter email id or Mobile Number"
+          id="sign_input"
+        />
+        <br />
+        <br />
+        <button id="sign_btn">LOGIN</button>
+        <div id="sign_bottom_div">
+          <p>New on 1mg? <a href="signup.html">Sign Up</a></p>
+          <p>Have a corporate account? <a href="signup.html">Click Here</a></p>
+          <p>
+            By logging in, you agree to our <br> Terms and Conditions & Privacy
+            Policy
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+
+  let continue_btn = document.getElementById("sign_btn").addEventListener("click", myfun)
+
+
+  function myfun()
+  {
+    event.preventDefault()
+
+    let input = document.getElementById("sign_input").value 
+
+    localStorage.setItem("number", input)
+    alert("Your OTP is 7334")
+
+    window.location.href="verifyotp.html"
+
+  }
+
+</script>

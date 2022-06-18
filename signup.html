@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signup.css">
+  </head>
+  <body>
+    <div id="container">
+        <!-- left div -->
+      <div id="left">
+        <img src="https://www.1mg.com/images/login-signup/Lab-Tests-at-Home.png" alt="">
+        <h2>Make Healthcare Simpler</h2>
+        <h3></h3>Get medicine information,order medicines,<br> lab tests and consult doctors online from <br> the comfort of your home.</p>
+      </div>
+
+      <!-- right div -->
+      <div id="right">
+        <h1>Sign Up</h1>
+        <p class = "otp_text">
+          Please enter your Mobile number to receive One Time Password (OTP)
+        </p>
+        <input type="text" placeholder="Enter Number" id="sign_input" />
+        <br />
+        <input type="checkbox" name="" id="sign_checkbox" />Are you a healthcare
+        professional?
+        <br>
+        <button id="sign_btn">CONTINUE</button>
+        <div id="sign_bottom_div">
+          <p>Have an account ? <a href="login.html">Login</a></p>
+          <p>For corporate Sign up, <a href="signup.html">Click Here</a></p>
+          <p>
+            By signing up, you agree to our <br> Terms and Conditions & Privacy
+            Policy
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+
+  let continue_btn = document.getElementById("sign_btn").addEventListener("click", myfun)
+
+
+  function myfun()
+  {
+    event.preventDefault()
+
+    let input = document.getElementById("sign_input").value 
+
+    localStorage.setItem("number", input)
+    alert("Your OTP is 7334")
+
+    window.location.href="verifyotp.html"
+
+  }
+
+</script>
