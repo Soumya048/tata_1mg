@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment page</title>
+    <link rel="stylesheet" href="./styles/payment.css">
+    
+</head>
+<body>
+
+    <!--navbar selction-->
+    <div id="navbar">
+        <img id="navimg" src="https://www.1mg.com/images/tata_1mg_logo.svg">
+      <div id="an1n">
+        <div>My Cart</div>
+        <div>Upload Prescription
+            
+        </div>
+        <div>Order Summary</div>
+        <div>Payment
+            <hr id="downbar"></hr>
+        </div>
+      </div>
+     <p id="an2n">Need Help?</p>
+      
+    </div>
+
+         <!--body box-->
+
+         <div id="body_box">
+    <!--payment card-->
+
+            <div id="payment_outer_box" >
+
+                <div id="slide_box" style="background-color: #fff3e3;">
+                    <div class="pay_box" id="wlt_box1" >
+                        <div id="imbx1">
+                            <img src="https://cdn-icons-png.flaticon.com/128/869/869118.png">
+                        </div>
+                        <h4>WALLETS</h4>
+                        
+                       
+                    </div>
+                    <div class="pay_box" id="wlt_box2">
+                        <div id="imbx2">
+                            <img src="https://static.wixstatic.com/media/e56168_4f3aa738d8c64f5b95d9765969b034e4~mv2.png/v1/crop/x_0,y_64,w_512,h_406/fill/w_473,h_487,al_c,lg_1,q_85,enc_auto/UPI%20Logo.png">
+                        </div>
+                       <h4>UPI</h4>
+                        </div>
+                    <div class="pay_box" id="wlt_box3">
+                        <div id="imbx3">
+                            <img  src="https://png.pngitem.com/pimgs/s/13-130380_credit-card-icon-card-icon-hd-png-download.png">
+                        </div>
+                        <h4>CARDS</h4>
+                       
+                        </div>
+                    <div class="pay_box" id="wlt_box4">
+                        <div id="imbx4">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg54rkM_QREuN50NTgo90gqXjvE5dHO7cYew&usqp=CAU">
+                        </div>
+                       <h4>NET BANKING</h4>
+                       </div>
+                    <div class="pay_box" id="wlt_box5">
+                        <div id="imbx5">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN2A6R88jgANu6Qo85aEQevGoNtDUxQEOyUw&usqp=CAU">
+                        </div>
+                      <h4>PAY ON DELIVERY</h4>
+                        </div>
+                </div>
+                <!--payment  mode-->
+                <div id="payment_mode">
+               
+                 
+                  
+
+                </div>
+            </div>
+
+
+
+
+            <!--payment statement-->
+            <div id="statement_div">
+                <div id="statement_para">
+                    <div style="display: flex;">
+                        <img id="statement_img" src="https://res.cloudinary.com/du8msdgbj/image/upload/v1609235175/rwfhtgwtk8zmnbwdvfme.png">
+                        <h5  style="margin-left: 3%">Pay with Mobikwik and get up to ₹500 cashback on allopathy medicines. Get assured cashback of</h5>
+                    </div>
+                    <hr style="width: 95%;">
+                    <h4 style="margin-left: 30%;color:green">SHOW ALL PAYMENT OFFERS</h4>
+                   
+                </div>
+                <div id="total_price_box">
+                    <div class="price_tags" id="ch1">Item total(MRP)</div>
+                    <div class="price_tags" id="ch2">membership Discount</div>
+                    <hr style="width: 95%;">
+                    <div class="price_tags" id="ch21"> 1mg care plane for 6 months</div>
+                    <div class="price_tags" id="ch3">shipping free</div>
+                    <div class="price_tags" id="ch4">packing and handing charge</div>
+                    <hr style="width: 95%;">
+                    <div class="price_tags" id="ch5">to be paid</div>
+                    <div id="payment_recall">ENTER THE DETAILS</div>
+
+                </div>
+            </div>
+         
+
+         </div>
+    
+    
+    
+</body>
+</html>
+<script type="module">
+
+    import {payment1,paymnet_upi,payment_card,cod_payment} from "./components/payment.js"
+
+    var random_val1=Math.floor(Math.random() *100)
+    var random_val2=Math.floor(Math.random() *100)
+    
+
+
+  
+  document.getElementById('wlt_box1').addEventListener('click',wlt_bx1)
+    function wlt_bx1(){
+        document.getElementById('payment_mode').innerHTML=null
+        document.getElementById('payment_mode').innerHTML=payment1()
+
+    }
+    wlt_bx1()
+
+    document.getElementById('wlt_box2').addEventListener('click',upi_box)
+    function upi_box(){
+        document.getElementById('payment_mode').innerHTML=null
+        document.getElementById('payment_mode').innerHTML=paymnet_upi()
+
+
+        var paymentdata=[
+     {card:"123412348765@ybl"},
+     {card:"123412328765@ybl"},
+     {card:"123432432765@ybl"},
+     {card:"123412334234@ybl"},
+     {card:"435212348765@ybl"},
+]
+
+document.querySelector("#verify_upi").addEventListener("click",checkpayment)
+
+function checkpayment(){
+    event.preventDefault()
+   
+ var upi_data={
+     upi_id:document.getElementById('upi_payment').value ,
+    
+ }
+ 
+  localStorage.setItem("upidata",JSON.stringify(upi_data))
+
+  var cardinfo = JSON.parse(localStorage.getItem("upidata"))
+   
+ 
+   var chk =  paymentdata.find(c => c.card == cardinfo.upi_id);
+    
+
+ if(chk != undefined || chk !=null){
+     alert("payment successful")
+     let product_id=`PXUT6879${random_val1}TY2${random_val2}`
+     localStorage.setItem("product_id",JSON.stringify(product_id))
+     window.location.href="##"
+ }
+
+ else{
+     alert("upi number is not valid")
+     
+ }
+}
+
+    }
+
+    
+
+    // card number impot
+    document.getElementById('wlt_box3').addEventListener('click',card_box)
+    function card_box(){
+       
+        document.getElementById('payment_mode').innerHTML=null
+        document.getElementById('payment_mode').innerHTML=payment_card()
+
+        var paymentdata=[
+ {card:123412349867,exmonth:"04",exyear:28,cvv:123},
+ {card:123412348765,exmonth:"05",exyear:28,cvv:222},
+ {card:123412343456,exmonth:"06",exyear:23,cvv:143},
+ {card:123412347896,exmonth:"02",exyear:24,cvv:333},
+ {card:123412347886,exmonth:"06",exyear:24,cvv:456},
+ {card:123412345862,exmonth:"07",exyear:28,cvv:574},
+ {card:123412347878,exmonth:"03",exyear:26,cvv:142},
+ {card:123677341234,exmonth:"07",exyear:23,cvv:567},
+]
+
+document.querySelector("#card_payment").addEventListener("click",checkpayment)
+
+function checkpayment(){
+    event.preventDefault()
+    console.log("anish")
+ var carddata={
+     cardnam:document.getElementById('card_num').value ,
+     cardmn:document.getElementById('expiry_num').value,
+     cardyer:document.getElementById('expiry_num_yy').value,
+     cardcvv:document.getElementById('cvv_num').value
+ }
+ 
+  localStorage.setItem("carddata",JSON.stringify(carddata))
+
+  var cardinfo = JSON.parse(localStorage.getItem("carddata"))
+   
+ 
+   var chk =  paymentdata.find(c => c.card == cardinfo.cardnam && c.exmonth == cardinfo.cardmn && c.exyear == cardinfo.cardyer && c.cvv == cardinfo.cardcvv);
+    
+
+ if(chk != undefined || chk !=null){
+     alert("payment successful")
+     let product_id=`PXUT6879${random_val1}TY2${random_val2}`
+     localStorage.setItem("product_id",JSON.stringify(product_id))
+     window.location.href="##"
+ }
+
+ else{
+     alert("card data is not valid")
+     
+ }
+}
+
+    }
+
+
+    //cod impot
+    document.getElementById('wlt_box5').addEventListener('click',cod_box)
+    function cod_box(){
+        document.getElementById('payment_mode').innerHTML=null
+        document.getElementById('payment_mode').innerHTML=cod_payment()
+
+    }
+   
+    document.getElementById('payment_recall').addEventListener("click",recall)
+
+    function recall(){
+     alert('select the payment option')
+    }
+
+    var total_price=500;
+    localStorage.setItem("total_price",JSON.stringify(total_price))
+    var total_amount=JSON.parse(localStorage.getItem('total_price'))
+
+    var p1=document.createElement("p")
+    p1.innerText=`₹${total_amount}`
+    p1.style.color="green"
+    p1.style.fontSize="18px"
+    p1.style.marginTop="-0%"
+    document.getElementById('ch1').append(p1)
+
+
+    var p1=document.createElement("p")
+    p1.innerText=`-₹115`
+    p1.style.color="green"
+    p1.style.fontSize="18px"
+    p1.style.marginTop="-0%"
+    document.getElementById('ch2').append(p1)
+
+    var p1=document.createElement("p")
+    p1.innerText=`₹275`
+    p1.style.color="green"
+    p1.style.fontSize="18px"
+    p1.style.marginTop="-0%"
+    document.getElementById('ch21').append(p1)
+
+    var p1=document.createElement("p")
+    p1.innerText=`₹0`
+    p1.style.color="green"
+    p1.style.marginTop="-0%"
+    document.getElementById('ch3').append(p1)
+
+    var p1=document.createElement("p")
+    p1.innerText=`₹29`
+    p1.style.fontSize="18px"
+    p1.style.color="green"
+    p1.style.marginTop="-0%"
+    document.getElementById('ch4').append(p1)
+
+    var full_amount=total_amount+275-115+19
+
+    var p1=document.createElement("p")
+    p1.innerText=`₹${full_amount}`
+    p1.style.fontSize="18px"
+    p1.style.color="orange"
+    p1.style.marginTop="-0%"
+    document.getElementById('ch5').append(p1)
+
+
+</script>

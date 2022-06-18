@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order_page</title>
+    <link rel="stylesheet" href="./styles/order.css">
+   <link rel="stylesheet" href="./styles/ordersummary.css">
+</head>
+<body>
+
+    <!--navbar part-->
+    <div id="navbar">
+        <img id="navimg" src="https://www.1mg.com/images/tata_1mg_logo.svg">
+      <div id="an1n">
+        <div>My Cart</div>
+        <div>Upload Prescription
+           
+        </div>
+        <div>Order Summary
+            <hr id="downbar"></hr>
+        </div>
+        <div>Payment</div>
+      </div>
+     <p id="an2n">Need Help?</p>
+      
+    </div>
+
+    <!--form box-->
+         <!--outer box-->
+    <div id="outer_form_box"> 
+        <!--inner form box-->
+        <div id="inner_form_box">
+              
+              <!--form box-->
+            <div id="for_box">
+            
+            
+
+            
+
+            </div>
+            <div>
+                <!--cancel button-->
+                <div id="add_address" >
+               + ADD NEW ADDRESS
+                </div>
+                <!--save button-->
+                <div id="continue_payment" onclick="conti_button_click()">
+                 CONTINUE
+                </div>
+          
+
+        </div>
+
+        <!--footer part -->
+        <div id="footer">
+            <div>
+                <hr style="width: 95%;">
+                <p style="font-size: 12px; margin-left: 2%;">You will receive a call from registered medical practitioner in<br> the next 30 minutes.
+                    Our working hours are from 8am to midnight.</p>
+               <p style="font-size: 12px; margin-left: 2%;">Order will be confirmed only after receiving the<br>
+                 prescription post appropriate consultation.</p>
+
+                
+            </div>
+            <div>
+                <hr style="width: 95%;">
+                <p style="font-size: 12px;">*1mg Cash will be credited 7 days after your complete order is delivered in <br>
+                    case of Products and in case of Lab Services 1mg Cash will be credited within<br>
+                     24 hours from the time of generation of test report.<br>
+                     1mg Cash will not be credited in case a return request is initiated for the order.</p>
+                
+                     <p style="font-size: 12px;">**Coupon Discount value may change if the total order value changes.</p>
+                     <p style="font-size: 12px;">***Items in your cart will always reflect the most recent price as compared<br>
+                         to the prices in their product detail page.</p>
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+</html>
+<script>
+    var add=JSON.parse(localStorage.getItem("address"))
+
+  
+   function display(data){
+   
+     data.forEach(function(el,index){
+
+        let card=document.createElement("div")
+        card.setAttribute("id","address_card")
+        
+
+        let name=document.createElement("p")
+        name.innerText=el.name
+
+        let flat=document.createElement("p")
+        flat.innerText=el.flat
+
+        let locality=document.createElement("p")
+        locality.innerText=el.locality
+        
+        let landmark=document.createElement("p")
+        landmark.innerText=el.landmark
+
+        let pincode=document.createElement("p")
+        pincode.innerText=el.pincode
+
+        let city=document.createElement("p")
+        city.innerText=el.city
+
+        let state=document.createElement("p")
+        state.innerText=el.state
+
+        let mobile=document.createElement("p")
+        mobile.innerText=el.mobile
+
+        let del=document.createElement("button")
+        del.innerText="Remove"
+        del.setAttribute("id","del_button")
+        del.addEventListener("click",function(){
+            delrow(el,index)
+        })
+
+
+        // let cont =document.createElement("button")
+        // cont.innerText="continue"
+        // cont.setAttribute("id","cont_button")
+        card.addEventListener("click",function(){
+            delivey_address(el)
+        })
+
+        card.append(name,flat,landmark,locality,city,state,pincode,mobile,del)
+
+        document.getElementById("for_box").append(card)
+     
+    })
+    }
+
+
+    function delrow(el,index){
+        add.splice(index,1)
+        localStorage.setItem("address",JSON.stringify(add))
+        window.location.reload()
+    }
+
+    function delivey_address(data){
+    
+       localStorage.setItem("delivery_address",JSON.stringify(data))
+    }
+
+    function conti_button_click(){
+        window.location.href="payment.html"
+    }
+    display(add)
+</script>

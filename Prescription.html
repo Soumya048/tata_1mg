@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="./styles/prescription.css">
+</head>
+<body>
+
+    <!--navbar part-->
+
+    <div id="navbar">
+        <img id="navimg" src="https://www.1mg.com/images/tata_1mg_logo.svg">
+      <div id="an1n">
+        <div>My Cart</div>
+        <div>Upload Prescription
+            <hr id="downbar"></hr>
+        </div>
+        <div>Order Summary</div>
+        <div>Payment</div>
+      </div>
+     <p id="an2n">Need Help?</p>
+      
+    </div>
+
+    <!--prescription upload part-->
+    <div id="an5n">
+       <div id="an6n">
+
+       
+    <p id="an4n"><label for="file" style="cursor: pointer;" id="an3n">Have a Prescription? Upload here</label></p>
+    <div id="upload"><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)"></div>
+    
+    <p id="picupload"><img id="output" width="200" /></p>
+</div>
+<div>
+    <div id="slidebox1">Valid Prescription Guide</div>
+    <p id="slidepara">Government regulations require a valid prescription</p>
+    <div id="slidebox2">Attached Prescription
+        <img id="slideimage">
+    </div>
+    <div id="slidebox3">CONTINUE</div>
+   </div>
+</div>
+
+<hr id="horizonal_line"></hr>
+
+
+   <!--   footer part -->
+<div id="footer_part">
+  <div id="footer_first">
+     <div id="doc_div">
+        <img src="https://www.1mg.com/images/oc_doc_1.png" id="doctor_img">
+        <div>
+            <h4 id="doc_para">Don't have a prescription?</h4>
+            <p id="doc_para2">Continue to get free telemedicine consultation with Registered Medical Practitioner.</p>
+        </div>
+     </div>
+     <div id="doc_consult_div">Continue With Doctor Consultation</div>
+
+     <hr id="footer_first_line">
+     <p id="doc_div_para">
+        Tata 1mg is a technology platform to facilitate transaction of business.<br> The products and services are offered for sale by the sellers.
+         <br>
+        The user authorizes the delivery personel to be his agent for delivery of the goods.
+     </p>
+  </div>
+
+  <div id="footer_second">
+    <div id="second_footer_div">
+        <h4>how it's works?</h4>
+        <p style="font-size: 14px;">You will receive a call from registered medical practitioner in the next 30 minutes.<br>
+             Our working hours are from 8am to midnight.</p>
+        <p style="font-size: 14px;">Order will be confirmed only after receiving the prescription post appropriate consultation.</p>
+
+    </div>
+    <hr id="sec_hori_line">
+  <p style="font-size: 12px;">*1mg Cash will be credited 7 days after your complete order is delivered in <br>
+    case of Products and in case of Lab Services 1mg Cash will be credited within<br>
+     24 hours from the time of generation of test report.<br>
+     1mg Cash will not be credited in case a return request is initiated for the order.</p>
+
+     <p style="font-size: 12px;">**Coupon Discount value may change if the total order value changes.</p>
+     <p style="font-size: 12px;">***Items in your cart will always reflect the most recent price as compared<br>
+         to the prices in their product detail page.</p>
+  </div>
+</div>
+    
+</body>
+</html>
+<script >
+
+    var loadFile = function(event) 
+    {
+
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+
+    var image1= document.getElementById('slideimage')
+    image1.src =URL.createObjectURL(event.target.files[0]);
+ 
+    
+   };
+  
+   document.getElementById("slidebox3").addEventListener("click",nextpage)
+   function nextpage(){
+    window.location.href="order.html"
+   }
+
+</script>
