@@ -449,11 +449,11 @@ let ORSL=[
  
  
  let data= JSON.parse(localStorage.getItem("user"))
- 
+ console.log(data)
  // blankcart function part
  
  function blankcart(data){
-    if(data.length==0){
+    if(data == null || data.length==0 ){
        document.getElementById("blankcart").style.display="block"
  
        document.getElementById("bottom").style.display="none"
@@ -606,10 +606,7 @@ let ORSL=[
        div5.setAttribute("id","fifthdiv")
        div5.append(div3,div4)
  
- 
- 
-    
-       
+
  
  let image1=document.createElement("img")
  image1.src="https://img.1mg.com/images/delete_icon.svg"
