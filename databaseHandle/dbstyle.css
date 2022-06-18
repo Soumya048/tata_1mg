@@ -1,0 +1,60 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    background-color: #06283D;
+}
+h2 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+#btnDiv {
+    margin-top: 50px;
+    text-align: center;
+}
+#btnDiv button {
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+hr {
+    width: 90%;
+    margin-top: 30px;
+}
+.sectionDiv {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.sectionDiv > div, form {
+    width: 100%;
+    display: flex;
+    row-gap: 20px;
+    flex-direction: column;
+    margin: auto;
+}
+.sectionDiv input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#submit, #delete_id+button {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#displayData {
+    text-align: center;
+}
+
