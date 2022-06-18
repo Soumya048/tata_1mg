@@ -1,0 +1,106 @@
+    #body{
+        background-color: #e7e7e7;
+        height: 680px;
+        
+    }
+     #your_order{
+        margin: auto;
+        width: 55%;
+       
+    }
+    #your_order>p{
+        font-size:19px ;
+        color: #1f1818;
+        
+    }
+    .fa-regular{
+        color: #f4a01c;
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+    a{
+        text-decoration: none;
+       
+        
+    }
+    #order_Dispatched{
+        /* border: 1px solid; */
+        /* height: 180px; */
+        background-color: white;
+       
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+    #order_Dispatched >a>div>p{
+        color:#fb1e0a ;
+        font-weight: 700;
+       border: 1px solid white;
+       
+    }
+    hr{
+        color: #f8f8f8;
+    }
+    /* #order_id{
+        display: flex;
+        justify-content: space-between;
+        /* border: 1px solid; */
+        /* width: 95%;
+        margin: auto;
+    } */ 
+    #mainbox{
+        /* border: 1px solid red; */
+        width: 95%;
+        margin: auto;
+        color: black;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #order_id>div>p{
+        color: black;
+    }
+    #need_help{
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+    }
+    
+    #need_help>div>a>p{
+        color: #fb1e0a;
+    }   
+
+
+    /* ********************Footer************** */
+
+    #bodyfooter{
+        background-color:#f9f1e7 ;
+        
+    }
+   
+    #navbar>a>h3{
+        color: black;
+    }
+    
+    #footer_image>div>a>img{
+        height: 110px;
+    }
+    #footer_image>div>p{
+        font-size: 19px;
+    }
+
+    /* ***********************social btn************ */
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    /* ********************order_dispatched************** */
+
+    
