@@ -205,7 +205,10 @@ width: 70%;
 }
 
 
-/* five row css name and img only */
+
+
+
+
 
 .styles__creative-section___klRBC{
 
@@ -230,55 +233,8 @@ vertical-align: center;
 
 
 
-.style__container___2ZDHh {
-  margin: 30px 0;
-}
 
-.style__slider-title___2c8kd {
-  margin: 0 auto;
-  width: 94%;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.style__view-all-btn___1v_UG{
-font-weight: 700;
-}
-
-.style__xs___E2aat {
-  padding: 5px 10px!important;
-  height: 1.7rem;
-  font-size: .75rem;
-}
-
-.style__info___1X5WU, .style__info___1X5WU:active, .style__info___1X5WU:focus, .style__info___1X5WU:hover, .style__primary___1qbGm, .style__primary___1qbGm:active, .style__primary___1qbGm:focus, .style__primary___1qbGm:hover {
-  background-color: #ff6f61;
-  color: #fff;
-}
-/* down row  */
-.style__slider-wrapper___ZbZBQ {
-  display: inline-block;
-  width: 100%;
-  background: #fff;
-  margin-top: 10px;
-  box-shadow: 0 0 7px 0 rgb(0 0 0 / 14%);
-  min-height: 150px;
-}
-
-
-
-  .nameAndImgOne, .nameAndImgTwo{
-
-    margin: auto 1rem;
-    width: 100%;
-    height: min-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid black; */
-  }
-
+/* five row css name and img only */
 
   /* card css */
   .style__container___39fE1 {
@@ -294,15 +250,11 @@ font-weight: 700;
   
   box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;
 }
-
-
   /* a tag */
-
   .style__anchor-style___1scP7 {
     padding: 10px;
     overflow: hidden;
 }
-
 
   /* img div  */
   .style__image-container___2G57P {
@@ -318,7 +270,6 @@ font-weight: 700;
   margin: auto;
   display: block;
 }
-
 .style__image___Ny-Sa.style__loaded___22epL {
   opacity: 1;
   transform: scale(1);
