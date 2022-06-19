@@ -128,11 +128,6 @@ const displayTwo = (str,arr) => {
 // appending footer 
 
 let footer = document.querySelector("#tata1mgFooter")
-
 // console.log(footer);
-
+//  footerFun() imported fun 
 footer.innerHTML = footerFun();
-
-// console.log(footerFun());
-
-//  footerFun();
