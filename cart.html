@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cart | 1mg</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -18,38 +18,41 @@
     <!-- navbar-->
     <div id="cartnav">
 
-<div id="mininav">
+        <div id="mininav">
 
-    <div id="first">
-        <img src="https://www.1mg.com/images/tata_1mg_logo.svg" alt="logo" id="logo">
-    </div>
-
-    <div id="second">
-        <input type="text" id="searchproduct"  placeholder="Search for Medicines and Health Products">
-       <div id="logodiv">
-            <i class="fa fa-search"></i>
-       </div>
-    </div>
-       
-</div>
-
-<div id="third">
-    <span id="help">Need Help?</span>
-</div>
-
+            <div id="first">
+                <a href="index.html"><img src="https://www.1mg.com/images/tata_1mg_logo.svg" alt="logo" id="logo"></a>
+                
+            </div>
+            <div id="second">
+                <input type="text" id="searchproduct"  placeholder="Search for Medicines and Health Products">
+                <div id="logodiv">
+                        <i class="fa fa-search"></i>
+                </div>
+            </div>
+            
+        </div>
+        <div id="third">
+            <span id="help">Need Help?</span>
+        </div>
      </div>
 
      <!-- bottom part -->
 
-     <div id="bottom">
+    <div id="bottom">
    
       <!-- left part -->
 
-
         <div id="left">
-         <p>Items NOT Requiring Prescription (<span id="totalspan"></span>)</p>
-      <div id="firstleft">      
-</div>
+            <div id="carePlanHere">
+
+            </div>
+
+            <p>Items NOT Requiring Prescription (<span id="totalspan"></span>)</p>
+
+            <div id="firstleft">  
+
+            </div>
 
 
 
@@ -88,7 +91,7 @@
 <div id="thirdleft">
    <h3 id="firsth3">Deals of The Day</h3>
    <section id="slideshow">
-      <div id="topdeals_slide" class="carousel slide" data-ride="carousel" data-interval="0"  >
+      <div id="topdeals_slide2" class="carousel slide" data-ride="carousel" data-interval="0"  >
       <div class="carousel-inner">
   
           <div class="carousel-item active container-fluid ">
@@ -105,11 +108,11 @@
                   </div>
               </div>
           </div>
-      <a class="carousel-control-prev" href="#topdeals_slide" role="button" data-slide="prev" >
+      <a class="carousel-control-prev" href="#topdeals_slide2" role="button" data-slide="prev" >
           <span class="carousel-control-prev-icon"></span>
       </a>
   
-      <a class="carousel-control-next" href="#topdeals_slide" role="button" data-slide="next">
+      <a class="carousel-control-next" href="#topdeals_slide2" role="button" data-slide="next">
           <span class="carousel-control-next-icon"></span>
       </a>
       </div>
@@ -119,7 +122,7 @@
 <div id="thirdleft">
    <h3 id="firsth3">In The Spotlight</h3>
    <section id="slideshow">
-      <div id="topdeals_slide" class="carousel slide" data-ride="carousel" data-interval="0"  >
+      <div id="topdeals_slide3" class="carousel slide" data-ride="carousel" data-interval="0"  >
       <div class="carousel-inner">
   
           <div class="carousel-item active container-fluid ">
@@ -136,11 +139,11 @@
                   </div>
               </div>
           </div>
-      <a class="carousel-control-prev" href="#topdeals_slide" role="button" data-slide="prev" >
+      <a class="carousel-control-prev" href="#topdeals_slide3" role="button" data-slide="prev" >
           <span class="carousel-control-prev-icon"></span>
       </a>
   
-      <a class="carousel-control-next" href="#topdeals_slide" role="button" data-slide="next">
+      <a class="carousel-control-next" href="#topdeals_slide3" role="button" data-slide="next">
           <span class="carousel-control-next-icon"></span>
       </a>
       </div>
@@ -249,6 +252,10 @@
       <p>₹0</p>
    </div>
 
+   <div id="cPdiv">
+
+    </div>
+
    <div id="fourthdiv">
       <p>Packaging and Handling Charges</p>
       <p id="packagingp"></p>
@@ -275,13 +282,13 @@
       <p id="locationtext">Your delivery location</p>
       <p id="location"></p>
    </div>
-   <a href=""><div id="checkout2">CHECKOUT</div></a>
+   <a href="Prescription.html"><div id="checkout2">CHECKOUT</div></a>
 </div>
 
 </div>
 
 
-</div>
+    </div>
 
 
     <!-- if no items in cart then the html part -->
@@ -322,5 +329,8 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+
+<!--for icon -->
+<script src="https://kit.fontawesome.com/fc98eb8266.js" crossorigin="anonymous"></script>
 
 <script src="./scripts/cart.js"></script>

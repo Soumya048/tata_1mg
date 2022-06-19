@@ -1,4 +1,6 @@
-let arr=JSON.parse(localStorage.getItem("Products")) || []
+let arr=JSON.parse(localStorage.getItem("orProd")) || []
+
+let orID = JSON.parse(localStorage.getItem("product_id"))
 
 arr.map(function(el){
     let box=document.createElement("div");
@@ -9,8 +11,8 @@ arr.map(function(el){
     P_orderId.innerText="Order ID"
     let P_name=document.createElement("p");
     let P_price=document.createElement("p");
-    P_price.innerText="P0164222429203631"
-    P_name.innerHTML=el.name;
+    P_price.innerText= orID
+    P_name.innerHTML=el.title;
     box_name.append(P_orderId,P_name)
     box_price.append(P_price)
     box.append(box_name, box_price)

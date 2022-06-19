@@ -5,6 +5,9 @@ body {
     line-height: 1.42857143;
     background-color: #f1f4f6;
 }
+.style__contentSection___2fS9b{
+    display: none;
+}
 .mk_red {
     color: #ff6f61;
 }
@@ -29,6 +32,7 @@ body {
     display: flex;
     width: 85%;
     margin: auto;
+    margin-top: 15px;
 }
 #sidebar {
     font-size: 0.8rem;
@@ -190,7 +194,7 @@ hr {
     color: white;
 }
 
-@media (max-width: 450px) {
+@media all and (min-width: 100px) and (max-width:450px) {
     #sidebar {
         display: none;
     }
@@ -209,7 +213,7 @@ hr {
     }
 }
 
-@media (max-width: 750px) {
+@media all and (min-width: 451px) and (max-width:750px) {
     #sidebar {
         display: none;
     }

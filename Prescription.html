@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   <link rel="stylesheet" href="./styles/prescription.css">
+    <title>Upload Prescription</title>
+    <link id="favicon" rel="icon" href="./images/faviconRebrand.ico" type="image.png" sizes="16x16" />
+    <link rel="stylesheet" href="./styles/prescription.css">
 </head>
 <body>
 
@@ -13,36 +14,33 @@
 
     <div id="navbar">
         <img id="navimg" src="https://www.1mg.com/images/tata_1mg_logo.svg">
-      <div id="an1n">
-        <div>My Cart</div>
-        <div>Upload Prescription
+        <div id="an1n">
+            <div>My Cart</div>
+            <div>Upload Prescription
             <hr id="downbar"></hr>
+            </div>
+            <div>Order Summary</div>
+            <div>Payment</div>
         </div>
-        <div>Order Summary</div>
-        <div>Payment</div>
-      </div>
-     <p id="an2n">Need Help?</p>
-      
+        <p id="an2n">Need Help?</p>
     </div>
 
     <!--prescription upload part-->
-    <div id="an5n">
-       <div id="an6n">
-
-       
-    <p id="an4n"><label for="file" style="cursor: pointer;" id="an3n">Have a Prescription? Upload here</label></p>
-    <div id="upload"><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)"></div>
-    
-    <p id="picupload"><img id="output" width="200" /></p>
-</div>
-<div>
-    <div id="slidebox1">Valid Prescription Guide</div>
-    <p id="slidepara">Government regulations require a valid prescription</p>
-    <div id="slidebox2">Attached Prescription
-        <img id="slideimage">
+<div id="an5n">
+    <div id="an6n">
+        <p id="an4n"><label for="file" style="cursor: pointer;" id="an3n">Have a Prescription? Upload here</label></p>
+        <div id="upload"><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)"></div>
+        <p id="picupload"><img id="output" width="200" /></p>
     </div>
-    <div id="slidebox3">CONTINUE</div>
-   </div>
+    
+    <div>
+        <div id="slidebox1">Valid Prescription Guide</div>
+            <p id="slidepara">Government regulations require a valid prescription</p>
+        <div id="slidebox2">Attached Prescription
+            <img id="slideimage">
+        </div>
+        <div id="slidebox3">CONTINUE</div>
+    </div>
 </div>
 
 <hr id="horizonal_line"></hr>
@@ -100,7 +98,6 @@
 
     var image1= document.getElementById('slideimage')
     image1.src =URL.createObjectURL(event.target.files[0]);
- 
     
    };
   

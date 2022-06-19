@@ -1,3 +1,4 @@
+
 let product_data = JSON.parse(localStorage.getItem("toShow"))
 
 let cartArr = JSON.parse(localStorage.getItem("toCart")) || [];
@@ -31,7 +32,7 @@ let append = (data) => {
 
     Tcontainer.innerHTML = `
     
-<div id="productDiv" > 
+    <div id="productDiv" > 
     <div id="product_image">
         <img src="${image}" alt="">
     </div>
@@ -39,16 +40,16 @@ let append = (data) => {
         <h3>${title}</h3>
         <p>${subTitle}</p>
         <div id="rating">${rate} <i class="fa-solid fa-star"></i></div>
-        <div id="pack">
-            <h4>Pack Size</h4>
+        <div class="topM" id="pack">
+            <h6>Pack Size</h6>
             <div>
-                <h5>${count}</h5>
-                <h4>₹${discount_price}</h4>
+                <h6>${count}</h6>
+                <h6>₹${discount_price}</h6>
             </div>
         </div>
 
-        <div id="product_highlights">
-            <h4>Product highlights</h4>
+        <div class="topM" id="product_highlights">
+            <h4 class="topM">Product highlights</h4>
             <p>&#8226; Contains 30 billion CFU plus with 14 live probiotic strains and prebiotic fibre</p>
             <p>&#8226; These capsules enhance the immune system</p>
             <p>&#8226; Helps in relieving gas and bloating</p>
@@ -64,27 +65,30 @@ let append = (data) => {
                     <span>₹${discount_price}</span> 
                     <span id="mrp_price">₹${price}</span> 
                     <span id="Offspan">${off}%off</span>
-                    <input type="radio" checked="checked" name="radio">
+                    <input id="ch1" type="radio" checked="checked" name="radio">
                     <span class="checkmark"></span>
                 </label>
                 <label class="checkbox_container"> 
                     <span>₹${discount_price}</span> 
                     <span id="c_plan">Care Plan</span> 
                     <span id="plan_ad">member price free shipping and 5% Extra NeuCoins</span>
-                    <input type="radio" name="radio">
+                    <input id="ch2" type="radio" name="radio">
                     <span class="checkmark"></span>
                 </label>
 
                 <p class="mk_mGre">Inclusive of all taxes</p>
                 <div>
-                    <span> <select name="" id="qty_box">
+                    <span> <select  id="qty_box">
 
                         </select>
                         <span>of <span>${count}</span></span>
                     </span>
                 </div>
-                <i id="chMark" class="fa-solid fa-check"></i>
-                <input id="submit" type="submit" value="ADD TO CART">
+                <div id="subDiv">
+                    <i id="chMark" class="fa-solid fa-check"></i>
+                    <input id="submit" type="submit" value="ADD TO CART">
+                </div>
+                
             </form>
         </div>
         <div id="addSec_2">
@@ -99,7 +103,7 @@ let append = (data) => {
                     <i class="fa-solid fa-tag fa-2x"></i>
                 </div>
                 <div>
-                    <p><span>Paytm Postpaid | Wallet: </span>Pay with Paytm and get up to ₹300 cashback on orders of ₹600 and more. Offer ends 30th June 2022.</p>
+                    <p><span class="mk_bold ">Paytm Postpaid | Wallet: </span>Pay with Paytm and get up to ₹300 cashback on orders of ₹600 and more. Offer ends 30th June 2022.</p>
                 </div>
                 <div id="showmoreTag">
                     <p>Show More</p> <span><i class="fa-solid fa-caret-down fa-2x"></i></span>
@@ -165,6 +169,16 @@ let addToCart = (func1, func2, func3) => {
     }, 5000)
 
 
+
+    let checkedPlan = document.getElementById('ch2').checked;
+
+    if(checkedPlan) {
+        localStorage.setItem("carPlan", JSON.stringify("true"))
+    }
+    else {
+        localStorage.setItem("carPlan", JSON.stringify("false"))
+    }
+    
 
     let selected_quant = Number(document.getElementById("qty_box").value);
     

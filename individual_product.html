@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link id="favicon" rel="icon" href="./images/faviconRebrand.ico" type="image.png" sizes="16x16" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- bootstrap 4.0 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/footer.css">
+
+
     <link rel="stylesheet" href="./styles/individual_product.css">
     <title>Document</title>
 
 </head>
 <body>
+    <div id="prodnavbar">
+
+    </div>
     <div id="top_container">
 
     </div>
@@ -188,13 +202,52 @@
     
     </div>
 
-
+    <footer id="tata1mgFooter"></footer> 
 </body>
 </html>
 
 <!--for icon -->
 <script src="https://kit.fontawesome.com/fc98eb8266.js" crossorigin="anonymous"></script>
 
+<script type="module">
+    import topNavbar from './components/navbar.js';
+    let nav = document.getElementById("prodnavbar")
+    nav.innerHTML = topNavbar()
+    import footerFun  from "./components/footer.js"
+    let footer = document.getElementById("tata1mgFooter")
+    footer.innerHTML = footerFun()
 
-<script src="./scripts/individual_product.js"></script>
+
+    let cityBox =  document.getElementById("location");
+
+    function getLocationWeather() {
+        navigator.geolocation.getCurrentPosition(success);
+        function success(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            getCityName(latitude, longitude);
+            console.log(latitude);
+            console.log(longitude);
+        }
+    }
+    getLocationWeather()
+
+    async function getCityName(lat, lon) {
+        const apikey = "8811ba9db17ed04c19c500b61c2d03e0"
+        console.log(lat);
+        console.log(lon);
+
+        let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apikey}`
+
+        let res = await fetch(url)
+        let data = await res.json(); 
+        console.log(data.name)
+        cityBox.value = data.name
+        localStorage.setItem("userlocation", JSON.stringify(data.name));
+    }
+
+    getCityName()
+</script>
+
+<script  src="./scripts/individual_product.js"></script>
 

@@ -1,22 +1,28 @@
+body {
+    padding: 0%;
+    margin: 0%;
+    font-family: "Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.42857143;
+    background-color: rgb(248, 248, 248);
+}
 *{
     text-transform: capitalize;
 }
 #navbar{
-    border: 1px solid;
+    background-color: white;
     height: 50px;
     width: 100%;
     display: flex;
 }
 #an1n{
-   display: flex;
- margin-left: 8%;
- border: 1px ;
- width: 50%;
- justify-content: space-around;
+    display: flex;
+    margin-left: 8%;
+    border: 1px ;
+    width: 50%;
+    justify-content: space-around;
 }
 #an1n>div{
     margin-top: 1%;
-    font-size: 18px;
 }
 #downbar{
     background-color: red;
@@ -25,14 +31,12 @@
 #an2n{
     margin-left: 20%;
     margin-top: 6px;
-    font-size: 18px;
 }
 #navimg{
     margin-left: 1%;
 }
 #body_box{
     display: flex;
-    border: 1px ;
     height: 600px;
     width: 90%;
     margin: auto;
@@ -40,12 +44,10 @@
 }
 #payment_outer_box{
     display: flex;
-    border: 1px solid;
     height: 100%;
     width: 65%;
 }
 #slide_box{
-    border: 1px solid;
     height: 100%;
     width: 30%;
 }
@@ -53,7 +55,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px ;
     width: 100%;
     height: 70px;
     margin-top: 5%;
@@ -66,9 +67,8 @@
     background-color:white;
 }
 #imbx1,#imbx2,#imbx3,#imbx4,#imbx5{
-    border: 1px ;
-    height: 100%;
-    width: 20%;
+    height: 50%;
+    width: 15%;
     margin-left: -35%;
 }
 #wallet_box{
@@ -95,13 +95,14 @@
     border-radius: 10px;
 }
 #payment_mode{
+    overflow: scroll;
     border: 1px ;
     height: 100%;
     width: 70%;
     background-color: white;
 }
 #payment_box{
-    border: 1px solid;
+    border: 1px solid rgb(235, 235, 235);
     height: auto;
     width: 90%;
     margin-left: 3%;
@@ -125,39 +126,41 @@
 #upi_img{
     height: 50px;
     width: 200px;
-   margin-left: 5%;
+    margin-left: 5%;
     
 }
 #upi_para1{
-  margin-left: 15%;
+    margin-left: 15%;
 }
 #upi_payment{
     margin-left: 15%;
     display: block;
     margin-top: 3%;
     width: 50%;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  border-bottom: 1px solid black;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
 }
 #verify_upi{
+    color: white;
+    font-weight: bold;
     margin-left: 15%;
     margin-top: 3%;
-   background-color:orangered;
-   border-radius: 5px;
+    background-color: #ff6f61;
+    border-radius: 5px;
     padding: 10px 10px 10px 10px;
-    border: 1px solid;
+    border: 1px solid rgb(235, 235, 235);
     cursor: pointer;
     
 }
 #card_num,#expiry_num,#expiry_num_yy,#cvv_num,#card_name{
-  margin-left: 10%;
-  width: 50%;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  border-bottom: 1px solid black;
+    margin-left: 10%;
+    width: 50%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
 }
 #expiry_num{
     width: 5%;
@@ -177,13 +180,16 @@
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
- 
+    -webkit-appearance: none;
+
 }
 #card_payment{
     padding: 10px 10px 10px 10px;
     border-radius: 5px;
-    color: orangered;
+    color: white;
+    font-weight: bold;
+    background-color: #ff6f61;
+    border: 0px;
     margin-top: 5%;
     margin-left: 60%;
     cursor: pointer;
@@ -204,11 +210,13 @@ input::-webkit-inner-spin-button {
     padding: 10px 10px 10px ;
     border-radius: 5px;
     cursor: pointer;
-    color: orangered;
+    color: #ff6f61;
     margin-left: 10%;
 }
 #statement_para{
-    border: 1px solid;
+    padding: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     height: auto;
     width: 100%;
     margin-left: 5%;
@@ -221,14 +229,15 @@ input::-webkit-inner-spin-button {
     margin-left: 1%;
 }
 #total_price_box{
-      border: 1px solid;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    background-color: white;
+    padding: 10px;
     height: auto;
     width: 100%;
     margin-left: 5%;
     margin-top: 4%;  
 }
 #statement_div{
-   
     border: 1px ;
     height: auto;
     width: 30%;
@@ -253,16 +262,19 @@ input::-webkit-inner-spin-button {
     margin-top: 15%;
     margin-left: 25%;
     border-radius: 5px;
-    background-color: rgb(213, 90, 45);
+    color: white;
+    font-weight: bold;
+    background-color: #ff6f61;
     cursor: pointer;
 }
 #ch5{
-    width: 100%;
-    height: 50px;
+    padding: 10px;
+    width: 95%;
+    height: 40px;
     margin-left: 0%;
-   padding-top: 5%;
-  border-radius: 10px;
-   background-color: #e4f6e7;
+    padding-top: 5%;
+    border-radius: 10px;
+    background-color: #e4f6e7;
 }
 #payment_mode>div{
     cursor: pointer;
@@ -277,11 +289,11 @@ input::-webkit-inner-spin-button {
         display: flex;
     }
     #an1n{
-    display: flex;
-     margin-left: 6%;
-     border: 1px ;
-     width: 50%;
-     justify-content: space-around;
+        display: flex;
+        margin-left: 6%;
+        border: 1px ;
+        width: 50%;
+        justify-content: space-around;
     }
     #an1n>div{
         margin-top: 1%;

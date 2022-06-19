@@ -1,13 +1,7 @@
-
-
-
-
-
-
 /* navbar part--> */
-  body{
-      background-color: whitesmoke;
-  }
+body{
+    background-color: whitesmoke;
+}
 #cartnav{
 display:flex; 
 justify-content: space-around;
@@ -482,7 +476,6 @@ font-weight: 500;
   }
 
 
-
   #append_div{
  /* width:200px;;
  height:400px; */
@@ -684,5 +677,51 @@ margin-bottom: 3%;
 
 }
 #footerspan{
-color:#ff6f61!important
+    color:#ff6f61!important
 }
+
+
+#carePlanDiv {
+    font-size: 0.8rem;
+    padding: 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+#carePlanDiv h6 > i {
+    color: #1aac2b;
+    margin-right: 5px;
+}
+#planDiv  {
+    color: grey;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 10px;
+}
+#planDiv i {
+    color: #ff6f61;
+}
+#redPlam {
+    padding: 1px 10px 1px 5px;
+    background-color:#913d36; 
+    width: fit-content;
+    color: white;
+    font-style: italic;
+    /* font-size: ; */
+}
+#mrpLine {
+    text-decoration: line-through;
+}
+#priceP {
+    margin-top: 10px;
+}
+#removePlan {
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+
+

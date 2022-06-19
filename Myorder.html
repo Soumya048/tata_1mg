@@ -6,20 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<script
-       src="https://kit.fontawesome.com/24c494a6b6.js"
-       crossorigin="anonymous"
-     ></script>
+<script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+<link id="favicon" rel="icon" href="./images/faviconRebrand.ico" type="image.png" sizes="16x16" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- bootstrap 4.0 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="styles/footer.css">
      <link rel="stylesheet" href="./styles/myorder.css">
-     <link rel="stylesheet" href="./styles/responsive.css">
+     <!-- <link rel="stylesheet" href="./styles/responsive.css"> -->
     
      
 <body>
+    <div id="prodnavbar">
+
+    </div>
+
+
     <div id="body">
         <div id="your_order">
             <p>Your Orders</h2>
-                <a href="order_Dispatched.html">
+                <a id="orderPage" href="order_Dispatched.html">
                     <div id="order_Dispatched">
                         <div>
                             <p></p>
@@ -45,7 +54,7 @@
 
     <!-- ************************Footer******************** -->
 
-    <div id="bodyfooter">
+    <!-- <div id="bodyfooter">
 
         <div id="navbar">
             <a href=""><h3>Business Partnership</h3></a>
@@ -55,11 +64,11 @@
             <a href=""><h3>Privacy Policy</h3></a>
             <a href=""><h3>Job</h3></a>
             
-        </div>
+        </div> -->
 
         <!-- **************footer image*********** -->
 
-        <div id="footer_image">
+        <!-- <div id="footer_image">
             <div>
                 <a href="https://static.legitscript.com/seals/729605.png"><img src="https://static.legitscript.com/seals/729605.png" alt=""></a>
                 <p>LegitScript is a verification and monitoring service for online pharmacies</p>
@@ -77,10 +86,10 @@
                 <p>We are certified 
                     "ISO/IEC 27001:2013"</p>
             </div>
-        </div>
+        </div> -->
 
         <!-- **************social media************* -->
-        <div id="social">
+        <!-- <div id="social">
             <div>
                 <a href="https://www.facebook.com/1mgOfficial"><img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1573200003/facebook-rebrand_ocvkak_1_cijmmc.svg" alt=""></a>
             </div>
@@ -90,10 +99,10 @@
             <div>
                 <a href="https://www.linkedin.com/company/1mg/"><img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1573200316/linkedin-rebrand_tbeedv_zaflot.svg" alt=""></a>
             </div>
-        </div>
+        </div> -->
 
         <!-- ********img******** -->
-        <div id="bottom_section">
+        <!-- <div id="bottom_section">
             <p>© 2022 Tata 1mg. All rights reserved.</p>    
         </div>
         <div id="bottom_section1"><h2>ONE APP FOR ALL HEALTH NEEDS</h2></div>
@@ -102,9 +111,58 @@
             <img src="https://res.cloudinary.com/du8msdgbj/image/upload/w_628,h_604,a_ignore,q_auto,f_auto/v1573200392/MWeb_Footer_Android_homepage_brrwvh.png" alt="">
         </div>
 
-    </div>
+    </div> -->
+
+    <footer id="tata1mgFooter"></footer> 
 </body>
 </html>
+
+<script type="module">
+    import topNavbar from './components/navbar.js';
+    let nav = document.getElementById("prodnavbar")
+    nav.innerHTML = topNavbar()
+    import footerFun  from "./components/footer.js"
+    let footer = document.getElementById("tata1mgFooter")
+    footer.innerHTML = footerFun()
+
+
+    let cityBox =  document.getElementById("location");
+
+    function getLocationWeather() {
+        navigator.geolocation.getCurrentPosition(success);
+        function success(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            getCityName(latitude, longitude);
+            console.log(latitude);
+            console.log(longitude);
+        }
+    }
+    getLocationWeather()
+
+    async function getCityName(lat, lon) {
+        const apikey = "8811ba9db17ed04c19c500b61c2d03e0"
+        console.log(lat);
+        console.log(lon);
+
+        let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apikey}`
+
+        let res = await fetch(url)
+        let data = await res.json(); 
+        console.log(data.name)
+        cityBox.value = data.name
+        localStorage.setItem("userlocation", JSON.stringify(data.name));
+    }
+
+    getCityName()
+</script>
+
+<!-- bootstrap Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!--for icon -->
+<script src="https://kit.fontawesome.com/fc98eb8266.js" crossorigin="anonymous"></script>
 
 <script src="./scripts/Myorder.js"></script>
 

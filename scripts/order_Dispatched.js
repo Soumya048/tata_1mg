@@ -1,4 +1,6 @@
-let arr=JSON.parse(localStorage.getItem("Products")) || []
+let arr=JSON.parse(localStorage.getItem("orProd")) || []
+let orID = JSON.parse(localStorage.getItem("product_id"))
+let delivery_Add  = JSON.parse(localStorage.getItem("delivery_address"));
 
 arr.map(function(el){
     let box=document.createElement("div");
@@ -11,7 +13,7 @@ arr.map(function(el){
     let P_price=document.createElement("p");
     P_price.innerText=el.price
     // p_id.innerText="po22234449"
-    P_name.innerHTML=el.name;
+    P_name.innerHTML=el.title;
     P_name.style.color="#ff6f61"
     box_name.append(P_name)
     box_price.append(P_price)
@@ -53,11 +55,11 @@ total1.innerText=total_pack;
   let box_name=document.createElement("div");
   let box_price=document.createElement("div");
   
-  let order_details=document.createElement("h3");
+  let order_details=document.createElement("h5");
   let P_idname=document.createElement("p");
   let p_order=document.createElement("p");
-  let subtotal=document.createElement("h4");
-  let packaging=document.createElement("h4");
+  let subtotal=document.createElement("p");
+  let packaging=document.createElement("p");
   let Total_payable=document.createElement("p");
   
   
@@ -66,9 +68,9 @@ total1.innerText=total_pack;
   let order_details_price=document.createElement("h3");
   let p_orderdate=document.createElement("p");
   let P_id=document.createElement("p");
-  let subtotal_price=document.createElement("h4");
-  let packaging_price=document.createElement("h4");
-  let Total_payable_price=document.createElement("h4");
+  let subtotal_price=document.createElement("h6");
+  let packaging_price=document.createElement("h6");
+  let Total_payable_price=document.createElement("h6");
 
   order_details.innerText="order Details"
   P_idname.innerText="Oreder ID";
@@ -82,7 +84,7 @@ total1.innerText=total_pack;
   order_details_price.innerText="."
 
 
-  P_id.innerHTML="P016422345";
+  P_id.innerHTML= orID;
   p_orderdate.innerText="june 5,2022"
  
   box_name.append(order_details,P_idname,p_order,subtotal,packaging,Total_payable)
@@ -98,29 +100,22 @@ total1.innerText=total_pack;
 
   let mainbox=document.createElement("div");
   mainbox.setAttribute("id","mainbox")
-  let box1=document.createElement("div");
-  let box2=document.createElement("div");
-  
-  let shipping=document.createElement("h2")
-  let person_name=document.createElement("p");
+
+let container1=document.getElementById("addrs");
+container1.innerHTML = `
+
+<p>Shipping Address:</p>
+<p>${delivery_Add.name}</p>
+<p>${delivery_Add.flat}</p>
+<p>${delivery_Add.state} - ${delivery_Add.pincode}</p>
+<p>Phone: ${delivery_Add.mobile}</p> 
+
+`
 
 
 
+// let date  = delivery_Add.date
 
-
-shipping.innerText="Shipping Address"
-
-
-
-
- 
-  box1.append(shipping)
-
-  box2.append()
-
-
-  mainbox.append(box1, box2)
-
-  let container1=document.getElementById("address");
-  container1.append(box)
+// //  date  = date.split("-")
+// console.log(date)  
 

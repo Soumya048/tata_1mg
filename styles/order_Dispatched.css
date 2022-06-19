@@ -1,10 +1,23 @@
+body {
+    padding: 0%;
+    margin: 0%;
+    font-family: "Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.42857143;
+    background-color: #f1f4f6;
+}
+.style__contentSection___2fS9b{
+    display: none;
+}
+
 #body_dispatch{
     background-color:#f8f8f8 ;
+    /* padding: 20px; */
     /* border: 1px solid; */
 }
 #order_dispatch{
+    padding: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     /* border: 1px solid red; */
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     background-color: white;
@@ -54,10 +67,12 @@ a{
 }
 #main_dody_part>div{
     /* border: 1px solid red; */
-    width: 95%;
+    width: 85%;
+    margin: auto;
    
 }
 #total_payable{
+    padding: 30px;
     /* border: 1px solid green; */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     background-color: white;
@@ -105,3 +120,6 @@ a{
     display: flex;
     justify-content: space-between;
 }
+#addrs {
+    padding: 10px;
+} 

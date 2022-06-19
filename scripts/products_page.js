@@ -1,5 +1,48 @@
 // let url = `https://soumya048.github.io/tata1mg_jsonapi/db.json`
 
+import topNavbar from '../components/navbar.js';
+import footerFun  from "../components/footer.js"
+
+let nav = document.getElementById("prodnavbar")
+nav.innerHTML = topNavbar()
+
+let footer = document.getElementById("tata1mgFooter")
+footer.innerHTML = footerFun()
+
+let cityBox =  document.getElementById("location");
+
+function getLocationWeather() {
+    navigator.geolocation.getCurrentPosition(success);
+    function success(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        getCityName(latitude, longitude);
+        console.log(latitude);
+        console.log(longitude);
+    }
+}
+getLocationWeather()
+
+async function getCityName(lat, lon) {
+    const apikey = "8811ba9db17ed04c19c500b61c2d03e0"
+    console.log(lat);
+    console.log(lon);
+
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apikey}`
+
+    let res = await fetch(url)
+    let data = await res.json(); 
+    console.log(data.name)
+    cityBox.value = data.name
+    localStorage.setItem("userlocation", JSON.stringify(data.name));
+}
+
+getCityName()
+
+
+
+
+
 
 async function getData() {
     let url = "https://soumya048.github.io/tata1mg_jsonapi/db.json"
@@ -9,7 +52,6 @@ async function getData() {
 }
 
 let productData = await getData();
-console.log(productData)
 
 let originaldata = productData
 
@@ -33,12 +75,13 @@ let append = (data) => {
 
         let img = document.createElement("img");
         img.src = `${image}`;
-
+    
         let addBtn = document.createElement("p");
         addBtn.innerText = "ADD"
 
         let box  = document.createElement("div");
         box.setAttribute("class", "inDiv");
+        
 
         box.innerHTML  = `
         
@@ -220,8 +263,8 @@ let discountFilter = document.getElementById("discount_div").children
 
 for(let el of discountFilter) {
     el.addEventListener("click", discountFilterFunction)
+    el.style.cursor = "pointer"
 }
-
 
 
 
@@ -282,6 +325,7 @@ let cateFilter = document.getElementById("categoriesDiv").children
 
 for(let el of cateFilter) {
     el.addEventListener("click", cateFilterFunction)
+    el.style.cursor = "pointer"
 }
 
 
@@ -345,6 +389,7 @@ let brandFilter = document.getElementById("brand_div").children
 
 for(let el of brandFilter) {
     el.addEventListener("click", brandFilterFunction)
+    el.style.cursor = "pointer"
 }
 
 
@@ -404,6 +449,7 @@ let typeFilter = document.getElementById("type_div").children
 
 for(let el of typeFilter) {
     el.addEventListener("click", typeFilterFunction)
+    el.style.cursor = "pointer"
 }
 
 

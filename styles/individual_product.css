@@ -5,6 +5,9 @@ body {
     line-height: 1.42857143;
     background-color: #f1f4f6;
 }
+.style__contentSection___2fS9b{
+    display: none;
+}
 .mk_red {
     color: #ff6f61;
 }
@@ -17,6 +20,10 @@ body {
 .mk_bold {
     font-weight: bold;
 }
+.topM {
+    margin-top: 10px;
+}
+
 #top_container {
     background-color: white;
     margin-bottom: 50px;
@@ -25,14 +32,12 @@ body {
 #productDiv {
     width: 85%;
     margin: auto;
-    margin-top: 100px;
-    /* border: 1px solid red; */
     display: flex;
 }
 
 #product_image {
     width: 400px;
-    height: 400px;
+    height: 350px;
     padding: 20px;
 }
 #product_image img {
@@ -48,11 +53,16 @@ body {
 }
 
 /* font section of product data */
+#product_data h3 {
+    font-size: 1.1rem;
+}
+
 #product_data > p {
     color: #ff6f61;
 }
 #product_data h4 {
     font-weight: lighter;
+
 }
 #product_highlights h4, p{
     font-size: 0.9rem;
@@ -84,7 +94,7 @@ body {
 }
 #product_Add {
     width: 45%;
-    position: relative;
+    
 }
 
 /* -------------------Mid section End -------------*/ 
@@ -110,6 +120,9 @@ body {
     margin: 1.2%;
     margin-left: 10px;
 }
+.pad {
+    padding: 20px;
+}
 /* head line section end */
 
 
@@ -117,8 +130,8 @@ body {
 /* Price select section */
 
 #price_form {
+    padding: 10px 30px;
     margin-top: 10px;
-    padding: 1em;
     grid-row-gap: 0.8em;
 }
 #mrp_price {
@@ -209,6 +222,7 @@ body {
     background: white;
 }
 
+
 /* checkbox section end */
 
 /* select quantity section */
@@ -224,6 +238,7 @@ body {
 
 #submit {
     margin-top: 20px;
+    margin-bottom: 20px;
     width: 100%;
     box-sizing: border-box;
     padding: 15px;
@@ -232,14 +247,15 @@ body {
     background-color: rgb(255, 111, 97);
     color: white;
     font-weight:700;
-    
 }
-
+#subDiv {
+    position: relative;
+}
 #chMark {
     position: absolute;
     color: white;
     top: 43%;
-    left: 41%;
+    left: 37%;
     display: none;
 }
 
@@ -402,7 +418,7 @@ body {
 /* Rating box */
 #rating_div {
     margin-top: 20px;
-    width: 51.5%;
+    width: 55%;
     margin-left: 7.5%;
     padding: 2%;
     background-color: white;
@@ -412,8 +428,8 @@ body {
 }
 #rtsec {
     color: #1AAB2A;
-    margin-top: -20px;
-    margin-bottom: -20px;
+    /* margin-top: -20px;
+    margin-bottom: -20px; */
 }
 #rbox_1 {
     display: flex;
@@ -484,7 +500,7 @@ body {
 /* socoal handel */
 #social_box {
     margin-top: 20px;
-    width: 55.5%;
+    width: 55%;
     margin-left: 7.5%;
     background-color: white;
     display: flex;
@@ -513,7 +529,7 @@ body {
 
 #otherInfo {
     margin-top: 20px;
-    width: 55.5%;
+    width: 55%;
     margin-left: 7.5%;
     /* background-color: white; */
     line-height: 10px;
@@ -535,18 +551,7 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 450px) {
+@media all and (min-width: 100px) and (max-width:450px) {
     .side, .middle {
         width: 100%;
     }
