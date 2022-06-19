@@ -1,8 +1,17 @@
     #body{
-        background-color: #e7e7e7;
-        height: 680px;
-        
+        height: 650px;
+        padding: 0%;
+        margin: 0%;
+        font-family: "Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        line-height: 1.42857143;
+        background-color: #f1f4f6;
     }
+    .style__contentSection___2fS9b{
+        display: none;
+    }
+    #orderPage:hover {
+        text-decoration: none;
+    } 
      #your_order{
         margin: auto;
         width: 55%;

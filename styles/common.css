@@ -1,0 +1,192 @@
+#prodnavbar {
+    background-color: white;
+}
+
+#navbar{
+    background-color: white;
+    height:45px;
+    width:100%;
+    border-bottom: 1px solid rgb(223, 221, 221);
+    display:flex;
+    align-items: center;
+}
+#shopping_bag {
+    color: black;
+}
+#shopping_bag:hover {
+    cursor: pointer;
+}
+#navbarfirst{
+    width:67%;
+    display:flex;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+#second {
+    position: relative;
+}
+
+#prodDiv {
+    background-color: white;
+    width: 615px;
+    border: 0px;
+    height: 500px;
+    overflow-y: scroll;
+    position: absolute;
+    left: 21%;
+    top: 12%;
+    display: none;
+    z-index: 99;
+}
+
+#cards {
+    padding: 20px;
+    border-bottom: 1px solid grey;
+}
+#cards:hover{
+    cursor: pointer;
+}
+#priceDIV {
+    color: #ff6f61;
+}
+#navbarsecond{
+    display:flex;
+    width:23%;
+    margin-left: 6%;
+    justify-content: space-around;
+    align-items: center;
+}
+#navbarfirst>#second{
+    color: #ff6f61;
+}
+#navbarfirst>#third{
+    display:flex;
+}
+#navbarfirst>#seventh{
+    display:flex;
+}
+#navbarfirst>div{
+    font-weight: 600;
+    font-size: 16px;
+}
+#navbarfirst>#first>img{
+    width:80%;
+}
+#navbarfirst>#third>#second{
+    font-size: 11px;
+    background-color: #ff6f61;
+    color:white;
+    height:16px;
+    padding: 0px 3px 0px 3px;
+    margin-left: 8px;
+}
+#navbarfirst>#seventh>#second{
+    font-size: 11px;
+    background-color: #ff6f61;
+    color:white;
+    height:16px;
+    padding: 0px 3px 0px 3px;
+    margin-left: 8px;
+}
+#navbarsecond>#fourth,
+#navbarsecond>#second{
+    font-size: 14px;
+    color: #212121;
+}
+
+
+/* second navbar part */
+#secondnavbar{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0;
+    border-bottom: 1px solid rgb(223, 221, 221);;
+}
+
+
+#secondnavbar>#right{
+    display: flex;
+    align-items: center;
+}
+#secondnavbar>#right>#first{
+    background-color: rgb(240, 240, 240);
+    padding: 4px;
+
+}
+
+#prodnavbar input{
+    outline: 0;
+    border:0;
+    background-color: rgb(240, 240, 240);
+}
+#secondnavbar>#right>#second{
+    display:flex;
+    align-items: center;
+    margin-left: 2px;
+    padding: 4px;
+    background-color: rgb(240, 240, 240);
+
+}
+#secondnavbar>#right>#second>input{
+    width:600px
+}
+#secondnavbar>#left{
+    display:flex;
+    align-items: center;
+    /* width:27%; */
+
+}
+#secondnavbar>#left>p{
+    font-size: 12px;
+    margin-top: 12px;
+    margin-right: 10px;
+}
+#qodiv{
+    padding: 6px 10px ;
+    font-size: 16px;
+    background-color: #ff6f61;
+    color: white;
+}
+#thirdnavbar>div,
+#mainthird>div{
+    display:flex;
+}
+#thirdnavbar{
+    width:93%;
+    margin-left:20px;
+    margin-top: 10px;
+    display:flex;
+    justify-content: space-around;
+}
+
+#thirdnavbar>div>a,
+#mainthird>#first>p{
+    font-size: 14px;
+    color: #212121;
+    font-weight: 400;
+}
+#thirdnavbar>div>a:hover,
+#mainthird>#first>p:hover{
+    color:#ff6f61
+}
+#thirdnavbar>div>i:hover,
+#mainthird>#first>i:hover{
+    color:#ff6f61
+
+}
+#navbarfirst>div:hover{
+    color:#ff6f61
+}
+#mainthird>#first{
+    width:10%;
+    margin: auto;
+}
+#thirdnavbar a {
+    color: #212121;
+}
+
+#navbarsecond a {
+    color: #212121;
+}

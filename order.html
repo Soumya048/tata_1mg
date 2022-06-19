@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order_page</title>
+    <link id="favicon" rel="icon" href="./images/faviconRebrand.ico" type="image.png" sizes="16x16" />
     <link rel="stylesheet" href="./styles/order.css">
 </head>
 <body>
@@ -27,13 +28,12 @@
     </div>
 
     <!--form box-->
-         <!--outer box-->
+    <!--outer box-->
     <div id="outer_form_box"> 
         <!--inner form box-->
+        <p id="head_form">add new address</p>
         <div id="inner_form_box">
-            <p id="head_form">add new address</p>
-              
-              <!--form box-->
+            <!--form box-->
             <div id="form_box">
             <form id="form">
                 <input type="text" id="flat_num" placeholder="flat number,building name,street/locality" class="form_style"><br>
@@ -129,20 +129,17 @@
 
         s1= new address(flat,landmark, pincode, locality ,city ,state ,name, mobile,date)
         add.push(s1)
-       if(flat=="" && pincode=="" && landmark=="" && locality=="" && city=="" && mobile=="" && name=="" && state==""){
-        alert("FILL THE DETAILS")
-       }
-       else if(flat=="" || pincode=="" || landmark=="" || locality=="" || city=="" || mobile=="" || name=="" || state==""){
-      alert("FILL ALL THE DETAILS FIRST")
-       }
+        if(flat=="" && pincode=="" && landmark=="" && locality=="" && city=="" && mobile=="" && name=="" && state==""){
+            alert("FILL THE DETAILS")
 
-       else
-       {
-        localStorage.setItem("address",JSON.stringify(add))
-        window.location.href="ordersummary.html"
-       }
-        
-        
+        }
+        else if(flat=="" || pincode=="" || landmark=="" || locality=="" || city=="" || mobile=="" || name=="" || state==""){
+            alert("FILL ALL THE DETAILS FIRST")
+        }
+        else{
+            localStorage.setItem("address",JSON.stringify(add))
+            window.location.href="ordersummary.html"
+        }
     }
 
 

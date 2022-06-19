@@ -1,12 +1,21 @@
+body {
+    padding: 0%;
+    margin: 0%;
+    font-family: "Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.42857143;
+    background-color: #f1f4f6;
+}
+
 *{
     text-transform: capitalize;
 }
 #navbar{
-    border: 1px solid;
     height: 50px;
     width: 100%;
     display: flex;
+    background-color: white;
 }
+
 #an1n{
 display: flex;
  margin-left: 8%;
@@ -16,7 +25,6 @@ display: flex;
 }
 #an1n>div{
     margin-top: 1%;
-    font-size: 18px;
 }
 #downbar{
     background-color: red;
@@ -25,16 +33,11 @@ display: flex;
 #an2n{
     margin-left: 20%;
     margin-top: 6px;
-    font-size: 18px;
 }
 #navimg{
     margin-left: 1%;
 }
-#file{
-    font-size: larger;
-}
 #an3n{
-    font-size: 20px;
     margin-left: 60%;
     
 }
@@ -45,10 +48,11 @@ display: flex;
     margin-left: 60%;
 }
 #an5n{
-   display: flex;
-  border: 1px ;
-  margin-top: 2%;
-  height: 400px;
+    background-color: white;
+    display: flex;
+    border: 1px ;
+    margin-top: 2%;
+    height: 500px;
 }
 #an6n{
     border: 1px ;
@@ -65,7 +69,7 @@ display: flex;
     width: 100%;
 }
 #slidebox1{
-    border: 1px solid;
+    border: 1px solid rgb(197, 197, 197);
     height: 40px;
     width: 60%;
     display: flex;
@@ -81,7 +85,7 @@ display: flex;
     margin-left: 50%;
 }
 #slidebox2{
-    border: 1px solid;
+    border: 1px solid rgb(197, 197, 197);
     height:200px;
     width: 60%;
     display: flex;
@@ -95,18 +99,17 @@ display: flex;
     border: 1px solid;
     height: 40px;
     width: 50%;
-   
     margin-left: 50%;
     margin-top: 5%;
     padding: 20px 25px 0px 55px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 20px;
-    background-color: red;
+    background-color: #ff6f61;
     color: white;
 }
 #slideimage{
-   margin-top: 1%;
+    margin-top: 1%;
     height: 100px;
     
 }
@@ -136,7 +139,7 @@ margin-left: 2%;
     text-align: center;
     padding: 10px 10px 10px 10px;
     cursor: pointer;
-   color: red;
+    color: red;
     border-radius: 2px;
     
 }
@@ -149,10 +152,11 @@ margin-left: 1%;
 }
 #second_footer_div{
     border: 1px solid;
-    height: 150px;
+    height: fit-content;
     width: 100%;
     text-align: center;
-   border-radius: 5px;
+    border-radius: 5px;
+    padding: 20px;
 }
 #sec_hori_line{
     margin-top: 5.5%;
@@ -167,11 +171,11 @@ margin-left: 1%;
         display: flex;
     }
     #an1n{
-    display: flex;
-     margin-left: 6%;
-     border: 1px ;
-     width: 50%;
-     justify-content: space-around;
+        display: flex;
+        margin-left: 6%;
+        border: 1px ;
+        width: 50%;
+        justify-content: space-around;
     }
     #an1n>div{
         margin-top: 1%;
@@ -238,7 +242,6 @@ margin-left: 1%;
         border-radius: 5px;
         cursor: pointer;
         font-size: 12px;
-        background-color: red;
         color: white;
     }
     #slideimage{

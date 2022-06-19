@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment page</title>
+    <link id="favicon" rel="icon" href="./images/faviconRebrand.ico" type="image.png" sizes="16x16" />
     <link rel="stylesheet" href="./styles/payment.css">
     
 </head>
@@ -71,9 +72,6 @@
                 </div>
                 <!--payment  mode-->
                 <div id="payment_mode">
-               
-                 
-                  
 
                 </div>
             </div>
@@ -89,19 +87,19 @@
                         <h5  style="margin-left: 3%">Pay with Mobikwik and get up to ₹500 cashback on allopathy medicines. Get assured cashback of</h5>
                     </div>
                     <hr style="width: 95%;">
-                    <h4 style="margin-left: 30%;color:green">SHOW ALL PAYMENT OFFERS</h4>
+                    <h4 style="margin-left: 40%;color:green">SHOW ALL PAYMENT OFFERS</h4>
                    
                 </div>
                 <div id="total_price_box">
                     <div class="price_tags" id="ch1">Item total(MRP)</div>
-                    <div class="price_tags" id="ch2">membership Discount</div>
+                    <div class="price_tags" id="ch2">Care Plan</div>
                     <hr style="width: 95%;">
-                    <div class="price_tags" id="ch21"> 1mg care plane for 6 months</div>
+                    <!-- <div class="price_tags" id="ch21"> 1mg care plane for 3 months</div> -->
                     <div class="price_tags" id="ch3">shipping free</div>
                     <div class="price_tags" id="ch4">packing and handing charge</div>
                     <hr style="width: 95%;">
                     <div class="price_tags" id="ch5">to be paid</div>
-                    <div id="payment_recall">ENTER THE DETAILS</div>
+                    <div id="payment_recall">PLACE ORDER</div>
 
                 </div>
             </div>
@@ -167,7 +165,7 @@ function checkpayment(){
      alert("payment successful")
      let product_id=`PXUT6879${random_val1}TY2${random_val2}`
      localStorage.setItem("product_id",JSON.stringify(product_id))
-     window.location.href="##"
+     localStorage.setItem("orStatus",JSON.stringify("true"))
  }
 
  else{
@@ -222,7 +220,7 @@ function checkpayment(){
      alert("payment successful")
      let product_id=`PXUT6879${random_val1}TY2${random_val2}`
      localStorage.setItem("product_id",JSON.stringify(product_id))
-     window.location.href="##"
+     localStorage.setItem("orStatus",JSON.stringify("true"))
  }
 
  else{
@@ -242,15 +240,20 @@ function checkpayment(){
 
     }
    
-    document.getElementById('payment_recall').addEventListener("click",recall)
+    // document.getElementById('payment_recall').addEventListener("click",recall)
 
-    function recall(){
-     alert('select the payment option')
+    // function recall(){
+    //  alert('select the payment option')
+    // }
+
+    let carePlan = JSON.parse(localStorage.getItem('carPlan'))
+    let cPlanValue = 0;
+    if(carePlan = "true") {
+        cPlanValue = 165;
     }
 
-    var total_price=500;
-    localStorage.setItem("total_price",JSON.stringify(total_price))
-    var total_amount=JSON.parse(localStorage.getItem('total_price'))
+    let paymentData = JSON.parse(localStorage.getItem('payment_details'))
+    var total_amount= paymentData.total_price
 
     var p1=document.createElement("p")
     p1.innerText=`₹${total_amount}`
@@ -261,7 +264,7 @@ function checkpayment(){
 
 
     var p1=document.createElement("p")
-    p1.innerText=`-₹115`
+    p1.innerText=`₹${cPlanValue}`
     p1.style.color="green"
     p1.style.fontSize="18px"
     p1.style.marginTop="-0%"
@@ -272,7 +275,7 @@ function checkpayment(){
     p1.style.color="green"
     p1.style.fontSize="18px"
     p1.style.marginTop="-0%"
-    document.getElementById('ch21').append(p1)
+    // document.getElementById('ch21').append(p1)
 
     var p1=document.createElement("p")
     p1.innerText=`₹0`
@@ -281,13 +284,13 @@ function checkpayment(){
     document.getElementById('ch3').append(p1)
 
     var p1=document.createElement("p")
-    p1.innerText=`₹29`
+    p1.innerText=`₹19`
     p1.style.fontSize="18px"
     p1.style.color="green"
     p1.style.marginTop="-0%"
     document.getElementById('ch4').append(p1)
 
-    var full_amount=total_amount+275-115+19
+    var full_amount=total_amount+ cPlanValue + 19
 
     var p1=document.createElement("p")
     p1.innerText=`₹${full_amount}`
@@ -295,6 +298,27 @@ function checkpayment(){
     p1.style.color="orange"
     p1.style.marginTop="-0%"
     document.getElementById('ch5').append(p1)
+
+
+
+
+
+    document.getElementById("payment_recall").addEventListener("click", nextpage)
+
+    let orderedProd = JSON.parse(localStorage.getItem("toCart"))
+    console.log(orderedProd)
+    function nextpage() {
+        let status = JSON.parse(localStorage.getItem("orStatus"))
+        if(status == "true") {
+            localStorage.setItem("orProd",JSON.stringify(orderedProd))
+
+            localStorage.setItem("toCart",JSON.stringify(""))
+            localStorage.setItem("orStatus",JSON.stringify("false"))
+            window.location.href  = "Myorder.html"
+        }
+    }
+
+
 
 
 </script>
