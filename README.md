@@ -2,12 +2,12 @@
 # Tata | 1mg
 ![Logo](https://user-images.githubusercontent.com/91946820/174490401-ed7605db-3f75-4340-b3b0-09af3074b040.png)
 
-Tata 1mg, previously 1mg, is a healthcare platform based in Gurgaon, India. It provides services, including e-pharmacy, diagnostics, e-consultation and health content. It was founded in April 2015 by Prashant Tandon, Gaurav Agarwal and Vikas Chauhan.
-
 
 ## Badges
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/Soumya048/tata_1mg)
+
+Tata 1mg, previously 1mg, is a healthcare platform based in Gurgaon, India. It provides services, including e-pharmacy, diagnostics, e-consultation and health content. It was founded in April 2015 by Prashant Tandon, Gaurav Agarwal and Vikas Chauhan.
 
 
 ## API Reference
