@@ -35,7 +35,7 @@ Tata 1mg, previously 1mg, is a healthcare platform based in Gurgaon, India. It p
 - npm and JSON Server
 
 ## Features
-- LogIn and LogOut functionality.
+- SignIn and SignUp functionality.
 - Navbar for easy navigation between pages.
 - Search Products functionality and Geolocation
 - Product Page with lots of filtering and Sorting options.
