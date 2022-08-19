@@ -5,6 +5,7 @@
 
 ## Badges
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/40278c03-b5e9-47f7-b05e-4f5fe5891dda/deploy-status)](https://beamish-florentine-720d31.netlify.app/)
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/Soumya048/tata_1mg)
 
 Tata 1mg, previously 1mg, is a healthcare platform based in Gurgaon, India. It provides services, including e-pharmacy, diagnostics, e-consultation and health content. It was founded in April 2015 by Prashant Tandon, Gaurav Agarwal and Vikas Chauhan.
@@ -99,7 +100,7 @@ There is footer page where the user see terms and condition and connected to our
 
 ![footersec](https://user-images.githubusercontent.com/91946820/174493499-5077e966-2309-4c4c-84fa-5e3e88d0497b.png)
 ## Demo
-[![Netlify Status](https://api.netlify.com/api/v1/badges/40278c03-b5e9-47f7-b05e-4f5fe5891dda/deploy-status)](https://app.netlify.com/sites/beamish-florentine-720d31/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/40278c03-b5e9-47f7-b05e-4f5fe5891dda/deploy-status)](https://beamish-florentine-720d31.netlify.app/)
 https://beamish-florentine-720d31.netlify.app/
 
 
