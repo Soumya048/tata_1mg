@@ -1,5 +1,5 @@
 
-# Tata | 1mg
+# Tata | 1mg ![Badge](https://visitor-counter-badge.vercel.app/api/Soumya048/tata_1mg/)
 ![Logo](https://user-images.githubusercontent.com/91946820/174490401-ed7605db-3f75-4340-b3b0-09af3074b040.png)
 
 
