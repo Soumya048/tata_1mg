@@ -1,10 +1,10 @@
 
-# Tata | 1mg ![Badge](https://visitor-counter-badge.vercel.app/api/Soumya048/tata_1mg/)
+# Tata | 1mg 
 ![Logo](https://user-images.githubusercontent.com/91946820/174490401-ed7605db-3f75-4340-b3b0-09af3074b040.png)
 
 
 ## Badges
-
+![Badge](https://visitor-counter-badge.vercel.app/api/Soumya048/tata_1mg/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/40278c03-b5e9-47f7-b05e-4f5fe5891dda/deploy-status)](https://beamish-florentine-720d31.netlify.app/)
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/Soumya048/tata_1mg)
 
