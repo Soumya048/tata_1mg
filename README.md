@@ -5,7 +5,7 @@
 
 ## Badges
 ![Badge](https://visitor-counter-badge.vercel.app/api/Soumya048/tata_1mg/)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/40278c03-b5e9-47f7-b05e-4f5fe5891dda/deploy-status)](https://beamish-florentine-720d31.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/40278c03-b5e9-47f7-b05e-4f5fe5891dda/deploy-status)](https://app.netlify.com/sites/beamish-florentine-720d31/deploys)
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/Soumya048/tata_1mg)
 
 Tata 1mg, previously 1mg, is a healthcare platform based in Gurgaon, India. It provides services, including e-pharmacy, diagnostics, e-consultation and health content. It was founded in April 2015 by Prashant Tandon, Gaurav Agarwal and Vikas Chauhan.
