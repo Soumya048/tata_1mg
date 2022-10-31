@@ -120,8 +120,8 @@
     
 
 
-  
-  document.getElementById('wlt_box1').addEventListener('click',wlt_bx1)
+
+document.getElementById('wlt_box1').addEventListener('click',wlt_bx1)
     function wlt_bx1(){
         document.getElementById('payment_mode').innerHTML=null
         document.getElementById('payment_mode').innerHTML=payment1()
@@ -135,65 +135,53 @@
         document.getElementById('payment_mode').innerHTML=paymnet_upi()
 
 
-        var paymentdata=[
-     {card:"123412348765@ybl"},
-     {card:"123412328765@ybl"},
-     {card:"123432432765@ybl"},
-     {card:"123412334234@ybl"},
-     {card:"435212348765@ybl"},
-]
+        var paymentdata = /^[\w.-]+@[\w.-]+$/
 
-document.querySelector("#verify_upi").addEventListener("click",checkpayment)
+document.querySelector("#verify_upi").addEventListener("click", checkpayment)
 
 function checkpayment(){
     event.preventDefault()
-   
- var upi_data={
-     upi_id:document.getElementById('upi_payment').value ,
-    
- }
- 
-  localStorage.setItem("upidata",JSON.stringify(upi_data))
 
-  var cardinfo = JSON.parse(localStorage.getItem("upidata"))
-   
- 
-   var chk =  paymentdata.find(c => c.card == cardinfo.upi_id);
-    
-
- if(chk != undefined || chk !=null){
-     alert("payment successful")
-     let product_id=`PXUT6879${random_val1}TY2${random_val2}`
-     localStorage.setItem("product_id",JSON.stringify(product_id))
-     localStorage.setItem("orStatus",JSON.stringify("true"))
- }
-
- else{
-     alert("upi number is not valid")
-     
- }
-}
-
+    var upi_data={
+        upi_id:document.getElementById('upi_payment').value ,
+        
     }
 
-    
+        localStorage.setItem("upidata",JSON.stringify(upi_data))
 
+        var cardinfo = JSON.parse(localStorage.getItem("upidata"));
+        var chk =  paymentdata.test(cardinfo.upi_id);
+
+    if(chk != undefined || chk !=null){
+        alert("payment successful")
+        let product_id=`PXUT6879${random_val1}TY2${random_val2}`
+        localStorage.setItem("product_id",JSON.stringify(product_id))
+        localStorage.setItem("orStatus",JSON.stringify("true"))
+    }
+
+    else{
+        alert("upi number is not valid")
+        
+    }
+}
+
+}
     // card number impot
     document.getElementById('wlt_box3').addEventListener('click',card_box)
     function card_box(){
-       
+    
         document.getElementById('payment_mode').innerHTML=null
         document.getElementById('payment_mode').innerHTML=payment_card()
 
         var paymentdata=[
- {card:123412349867,exmonth:"04",exyear:28,cvv:123},
- {card:123412348765,exmonth:"05",exyear:28,cvv:222},
- {card:123412343456,exmonth:"06",exyear:23,cvv:143},
- {card:123412347896,exmonth:"02",exyear:24,cvv:333},
- {card:123412347886,exmonth:"06",exyear:24,cvv:456},
- {card:123412345862,exmonth:"07",exyear:28,cvv:574},
- {card:123412347878,exmonth:"03",exyear:26,cvv:142},
- {card:123677341234,exmonth:"07",exyear:23,cvv:567},
+{card:123412349867,exmonth:"04",exyear:28,cvv:123},
+{card:123412348765,exmonth:"05",exyear:28,cvv:222},
+{card:123412343456,exmonth:"06",exyear:23,cvv:143},
+{card:123412347896,exmonth:"02",exyear:24,cvv:333},
+{card:123412347886,exmonth:"06",exyear:24,cvv:456},
+{card:123412345862,exmonth:"07",exyear:28,cvv:574},
+{card:123412347878,exmonth:"03",exyear:26,cvv:142},
+{card:123677341234,exmonth:"07",exyear:23,cvv:567},
 ]
 
 document.querySelector("#card_payment").addEventListener("click",checkpayment)
@@ -201,32 +189,32 @@ document.querySelector("#card_payment").addEventListener("click",checkpayment)
 function checkpayment(){
     event.preventDefault()
     console.log("anish")
- var carddata={
-     cardnam:document.getElementById('card_num').value ,
-     cardmn:document.getElementById('expiry_num').value,
-     cardyer:document.getElementById('expiry_num_yy').value,
-     cardcvv:document.getElementById('cvv_num').value
- }
- 
-  localStorage.setItem("carddata",JSON.stringify(carddata))
+var carddata={
+    cardnam:document.getElementById('card_num').value ,
+    cardmn:document.getElementById('expiry_num').value,
+    cardyer:document.getElementById('expiry_num_yy').value,
+    cardcvv:document.getElementById('cvv_num').value
+}
 
-  var cardinfo = JSON.parse(localStorage.getItem("carddata"))
-   
- 
-   var chk =  paymentdata.find(c => c.card == cardinfo.cardnam && c.exmonth == cardinfo.cardmn && c.exyear == cardinfo.cardyer && c.cvv == cardinfo.cardcvv);
+localStorage.setItem("carddata",JSON.stringify(carddata))
+
+var cardinfo = JSON.parse(localStorage.getItem("carddata"))
+
+
+var chk =  paymentdata.find(c => c.card == cardinfo.cardnam && c.exmonth == cardinfo.cardmn && c.exyear == cardinfo.cardyer && c.cvv == cardinfo.cardcvv);
     
 
- if(chk != undefined || chk !=null){
-     alert("payment successful")
-     let product_id=`PXUT6879${random_val1}TY2${random_val2}`
-     localStorage.setItem("product_id",JSON.stringify(product_id))
-     localStorage.setItem("orStatus",JSON.stringify("true"))
- }
+if(chk != undefined || chk !=null){
+    alert("payment successful")
+    let product_id=`PXUT6879${random_val1}TY2${random_val2}`
+    localStorage.setItem("product_id",JSON.stringify(product_id))
+    localStorage.setItem("orStatus",JSON.stringify("true"))
+}
 
- else{
-     alert("card data is not valid")
-     
- }
+else{
+    alert("card data is not valid")
+    
+}
 }
 
     }
@@ -239,7 +227,7 @@ function checkpayment(){
         document.getElementById('payment_mode').innerHTML=cod_payment()
 
     }
-   
+
     // document.getElementById('payment_recall').addEventListener("click",recall)
 
     // function recall(){
